@@ -1,0 +1,34 @@
+/* #region Master Styles  */
+:root {
+  --backgroundColor: #111;
+  --generalTextColor: white;
+  --mainColor: #aa5454;
+  --secondaryColor: #edcbb1;
+  --buttonColor: #232323;
+  --highlightColor: #505050;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background: var(--backgroundColor);
+  color: var(--generalTextColor);
+}
+/* #endregion Master Styles */
+
+/* #region General Layout */
+.oneColGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/* #endregion General Layout */
+
+/* #region Homepage Styles */
+/* #endregion Homepage Styles */
+
+/* #region Café & Meny Styles */
+/* #endregion Café & Meny Styles */
+
+/* #region Booking Styles */
+/* #endregion Booking Styles */
