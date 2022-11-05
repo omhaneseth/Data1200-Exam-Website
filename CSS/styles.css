@@ -1,5 +1,7 @@
 /* #region Master Styles  */
 :root {
+  /* Variables containing our website colors. 
+  Avoid putting colors directly in the code, put them here */
   --backgroundColor: #111;
   --generalTextColor: white;
   --mainColor: #aa5454;
@@ -8,27 +10,106 @@
   --highlightColor: #505050;
 }
 
-body {
+* {
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
   background: var(--backgroundColor);
   color: var(--generalTextColor);
 }
 /* #endregion Master Styles */
 
-/* #region General Layout */
-.oneColGrid {
-  display: grid;
-  grid-template-columns: 1fr;
+/* #region Page Layout */
+.grid-container {
+  /* For mobile */
+  grid-template-areas:
+    "header header"
+    "image image"
+    "main main"
+    "main main"
+    "main main"
+    "main main"
+    "footer footer";
+  gap: 10px;
 }
 
-/* #endregion General Layout */
+@media screen and (min-width: 600px) {
+  /* For desktop */
+  .grid-container {
+    grid-template-areas:
+      "header header header header header header"
+      "image image image image image image"
+      "left left main main right right"
+      "left left main main right right"
+      "footer footer footer footer footer footer";
+    gap: 10px;
+  }
+}
+/* #endregion Page Layout */
 
-/* #region Homepage Styles */
-/* #endregion Homepage Styles */
+/* #region Header Layout & Function */
+.desktopHeader {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-/* #region Café & Meny Styles */
-/* #endregion Café & Meny Styles */
+.icon,
+.mobileNav {
+  display: none;
+}
 
-/* #region Booking Styles */
-/* #endregion Booking Styles */
+@media screen and (max-width: 600px) {
+  /* For mobile */
+  .topNav a {
+    display: none;
+  }
+
+  .showMenu,
+  .showMenu a,
+  .topNav .icon {
+    display: block;
+  }
+}
+/* #endregion Header Layout & Function */
+
+/* #region Footer Layout */
+footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+  margin: 0 3em;
+}
+/* endregion Footer Layout */
+
+/* #region Header Style */
+header {
+  padding: 50px;
+  background-color: tan;
+}
+
+.topNav a,
+.showMenu a {
+  text-decoration: none;
+  color: var(--generalTextColor);
+}
+
+.topNav a:hover,
+.showMenu a:hover {
+  color: var(--mainColor);
+}
+
+.topNav a.activePage,
+.showMenu a.activePage {
+  color: var(--mainColor);
+}
+
+.mobileNav {
+  line-height: 200%;
+  padding: 30px 0 0 0;
+}
+/* #endregion Header Style */

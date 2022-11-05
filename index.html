@@ -6,44 +6,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./CSS/styles.css" />
+    <link
+      rel="stylesheet"
+      href="./Assets/Icons/fontawesome-free-6.2.0-web/css/fontawesome.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./Assets/Icons/fontawesome-free-6.2.0-web/css/brands.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./Assets/Icons/fontawesome-free-6.2.0-web/css/solid.css"
+    />
   </head>
   <body>
-    <header>
-      <div>Peber</div>
-      <nav>
-        <ul>
-          <li>Café og meny</li>
-          <li>Booking</li>
-          <li>Accessibility</li>
-          <li>Topical</li>
-        </ul>
-      </nav>
-    </header>
-    <div class="oneColGrid">
-      <div>
-        <picture></picture>
-        <h1>Peber</h1>
-        <p>
-          Velkommen til Peber! Våre lokaler ligger idyllisk plassert langs
-          akerselva. Her vil du finne alt du trengertil selskap og fest.
-        </p>
-      </div>
-      <footer>
-        <div>Kontakt Oss</div>
-        <div>
-          Navigasjon
-          <nav>
-            <ul>
-              <li>Café og meny</li>
-              <li>Booking</li>
-              <li>Accessibility</li>
-              <li>Topical</li>
-            </ul>
+    <div class="grid-container">
+      <header>
+        <div class="desktopHeader">
+          <h1><a href="#">Peber</a></h1>
+          <nav class="topNav">
+            <a
+              href="javascript:void(0);"
+              class="icon"
+              onclick="mobileMenuButton()"
+              ><i class="fa-solid fa-bars"></i
+            ></a>
+            <a href="#" class="activePage">Home</a>
+            <a href="#">Café og meny</a>
+            <a href="#">Booking</a>
+            <a href="#">Accessibility</a>
+            <a href="#">Topical</a>
           </nav>
+        </div>
+        <nav class="mobileNav" id="theMobileNav">
+          <a href="#" class="activePage">Home</a>
+          <a href="#">Café og meny</a>
+          <a href="#">Booking</a>
+          <a href="#">Accessibility</a>
+          <a href="#">Topical</a>
+        </nav>
+      </header>
+      <div>
+        <div>
+          <picture></picture>
+          <h1>Peber</h1>
+          <p>
+            Velkommen til Peber! Våre lokaler ligger idyllisk plassert langs
+            akerselva. Her vil du finne alt du trengertil selskap og fest.
+          </p>
+        </div>
+        <footer>
+          <div>Kontakt Oss</div>
+          <div>
+            Navigasjon
+            <nav>
+              <ul>
+                <li>Café og meny</li>
+                <li>Booking</li>
+                <li>Accessibility</li>
+                <li>Topical</li>
+              </ul>
+            </nav>
+          </div>
           <div>Åpningstider</div>
           <div>Sosiale Medier</div>
-        </div>
-      </footer>
+        </footer>
+      </div>
+      <script>
+        function mobileMenuButton() {
+          var x = document.getElementById("theMobileNav");
+          if (x.className === "mobileNav") {
+            x.className += " showMenu";
+          } else {
+            x.className = "mobileNav";
+          }
+        }
+      </script>
     </div>
   </body>
 </html>
