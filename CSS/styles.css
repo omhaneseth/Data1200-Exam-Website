@@ -1,4 +1,4 @@
-/* #region Master Styles  */
+/* #region MASTER STYLES  */
 :root {
   /* Variables containing our website colors. 
   Avoid putting colors directly in the code, put them here */
@@ -21,37 +21,40 @@ body {
 }
 /* #endregion Master Styles */
 
-/* #region Page Layout */
+/* #region GENERAL PAGE LAYOUT */
 .grid-container {
   /* For mobile */
   display: grid;
   grid-template-areas:
     "header header"
     "image image"
+    "left left"
     "main main"
     "main main"
     "main main"
     "main main"
+    "right right"
     "footer footer";
 }
 
 @media screen and (min-width: 600px) {
   /* For desktop */
   .grid-container {
-    /* display: grid; */
     grid-template-areas:
-      "header header header header header header"
-      "image image image image image image"
-      "left left main main right right"
-      "left left main main right right"
-      "footer footer footer footer footer footer";
+      "header header header header"
+      "image image image image"
+      "left main main right"
+      "left main main right"
+      "footer footer footer footer";
   }
 }
 /* #endregion Page Layout */
 
-/* #region Header Layout & Function */
+/* #region HEADER LAYOUT */
 header {
   grid-area: header;
+  position: fixed;
+  width: 100%;
 }
 
 .desktopHeader {
@@ -77,11 +80,11 @@ header {
     display: block;
   }
 }
-/* #endregion Header Layout & Function */
+/* #endregion Header Layout */
 
-/* #region Header Style */
+/* #region HEADER STYLE */
 header {
-  padding: 2em 4em;
+  padding: 1.2em 4em;
   background-color: tan;
 }
 
@@ -107,24 +110,49 @@ header {
 }
 /* #endregion Header Style */
 
-/* #region Homepage */
-.homepageMainImg {
+/* #region TITLE & IMAGE LAYOUT */
+.pageMainImg {
   grid-area: image;
-  background-image: url(../Assets/Images/Placeholders/placeholderImage1.jpeg);
-  width: 100vw;
-  height: 50em;
+  background-image: url(../Assets/Images/Placeholders/placeholderImage1.jpeg); /* Move this to each page */
+  width: 100%;
+  height: 100vh;
   background-size: cover;
   background-position: right;
   background-repeat: no-repeat;
-  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
-.pageTitle {
+.pageInformation {
+  margin: auto;
   text-align: center;
 }
-/* #endregion Homepage */
 
-/* #region Footer Layout */
+.arrowDown {
+  text-align: center;
+}
+
+/* #endregion Title & Image Layout */
+
+/* #region TITLE & IMAGE STYLING */
+.arrowDown {
+  margin: 1.2em;
+}
+
+.arrowDown i {
+  color: var(--generalTextColor);
+  background: #aa545490;
+  padding: 0.5em;
+  border-radius: 90px;
+  font-size: 2em;
+}
+
+.arrowDown i:hover {
+  color: var(--mainColor);
+}
+/* #endregion Title & Image Styling */
+
+/* #region FOOTER LAYOUT */
 footer {
   grid-area: footer;
   display: flex;
@@ -133,3 +161,7 @@ footer {
   margin: 0 3em;
 }
 /* #endregion Footer Layout */
+
+/* #region HOMEPAGE LAYOUT */
+
+/* #endregion homepage layout */
