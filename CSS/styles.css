@@ -13,6 +13,8 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-margin-top: 8rem;
 }
 
 body {
@@ -20,35 +22,6 @@ body {
   color: var(--generalTextColor);
 }
 /* #endregion Master Styles */
-
-/* #region GENERAL PAGE LAYOUT */
-.grid-container {
-  /* For mobile */
-  display: grid;
-  grid-template-areas:
-    "header header"
-    "image image"
-    "left left"
-    "main main"
-    "main main"
-    "main main"
-    "main main"
-    "right right"
-    "footer footer";
-}
-
-@media screen and (min-width: 600px) {
-  /* For desktop */
-  .grid-container {
-    grid-template-areas:
-      "header header header header"
-      "image image image image"
-      "left main main right"
-      "left main main right"
-      "footer footer footer footer";
-  }
-}
-/* #endregion Page Layout */
 
 /* #region HEADER LAYOUT */
 header {
@@ -68,7 +41,7 @@ header {
   display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 940px) {
   /* For mobile */
   .topNav a {
     display: none;
@@ -84,24 +57,43 @@ header {
 
 /* #region HEADER STYLE */
 header {
-  padding: 1.2em 4em;
-  background-color: tan;
+  padding: 1.2em 2vw 1.2em 1em;
+  background-color: var(--backgroundColor);
+}
+
+.desktopHeader h1 a {
+  text-decoration: none;
+  color: var(--mainColor);
+  font-size: 2em;
 }
 
 .topNav a,
 .showMenu a {
   text-decoration: none;
   color: var(--generalTextColor);
+  font-size: 1.4em;
+  margin: 0 1em;
+  border-bottom: solid 2px #00000000;
+  transition: all 0.3s;
 }
 
-.topNav a:hover,
-.showMenu a:hover {
+.topNav a:hover {
+  /* border-bottom: solid var(--mainColor) 2px; */
   color: var(--mainColor);
 }
 
-.topNav a.activePage,
+.showMenu a:hover {
+  border-bottom: solid 2px var(--mainColor);
+  color: var(--mainColor);
+}
+
+.topNav a.activePage {
+  border-bottom: solid var(--mainColor) 2px;
+}
+
 .showMenu a.activePage {
   color: var(--mainColor);
+  text-decoration: underline;
 }
 
 .mobileNav {
@@ -111,9 +103,16 @@ header {
 /* #endregion Header Style */
 
 /* #region TITLE & IMAGE LAYOUT */
-.pageMainImg {
+.mainImg {
+  background-image: linear-gradient(
+      var(--backgroundColor) 10%,
+      #00000000 45%,
+      #00000000 55%,
+      var(--backgroundColor) 90%
+    ),
+    /* #000000e8 */ url(../Assets/Images/Placeholders/placeholderImage1.jpeg);
+  /* Move this to each page ^^^^^ */
   grid-area: image;
-  background-image: url(../Assets/Images/Placeholders/placeholderImage1.jpeg); /* Move this to each page */
   width: 100%;
   height: 100vh;
   background-size: cover;
@@ -132,16 +131,16 @@ header {
   text-align: center;
 }
 
-/* #endregion Title & Image Layout */
+/* #endregion title & image layout */
 
 /* #region TITLE & IMAGE STYLING */
 .arrowDown {
-  margin: 1.2em;
+  margin: 3em;
 }
 
 .arrowDown i {
   color: var(--generalTextColor);
-  background: #aa545490;
+  /* background-image: radial-gradient(#9112129c 10%, #0000003d); */
   padding: 0.5em;
   border-radius: 90px;
   font-size: 2em;
@@ -150,7 +149,7 @@ header {
 .arrowDown i:hover {
   color: var(--mainColor);
 }
-/* #endregion Title & Image Styling */
+/* #endregion title & image styling */
 
 /* #region FOOTER LAYOUT */
 footer {
@@ -162,6 +161,93 @@ footer {
 }
 /* #endregion Footer Layout */
 
-/* #region HOMEPAGE LAYOUT */
+/* #region HOMEPAGE*/
+.homepage-grid-container {
+  /* For mobile & tablet */
+  display: grid;
+  gap: 2em;
+  grid-template-areas:
+    "header"
+    "image"
+    "left"
+    "main1"
+    "main2"
+    "main3"
+    "main4"
+    "right"
+    "footer";
+}
 
-/* #endregion homepage layout */
+@media screen and (min-width: 940px) {
+  /* For Large desktop */
+  .homepage-grid-container {
+    grid-template-columns: 1fr 25em 25em 1fr;
+    grid-template-areas:
+      "header header header header"
+      "image image image image"
+      "left main1 main2 right"
+      "left main3 main4 right"
+      "footer footer footer footer";
+  }
+}
+
+@media screen and (max-width: 500px) {
+  /* For mobile */
+  .homepageButton,
+  .homepageButton img {
+    width: 100% !important;
+    border-radius: 0 !important;
+  }
+
+  footer {
+    /* Temporary for testing */
+    display: none;
+  }
+}
+
+.homepageButton1 {
+  grid-area: main1;
+}
+
+.homepageButton2 {
+  grid-area: main2;
+}
+
+.homepageButton3 {
+  grid-area: main3;
+}
+
+.homepageButton4 {
+  grid-area: main4;
+}
+
+.homepageButton {
+  width: 25em;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--buttonColor);
+  border-radius: 25px 60px 25px 60px;
+}
+
+.homepageButton img {
+  width: 25em;
+  border-radius: 25px 60px 0 0;
+}
+
+.homepageButton h2 {
+  font-size: 2em;
+  padding: 0.4em;
+}
+
+.homepageButton a {
+  color: var(--generalTextColor);
+  text-decoration: none;
+}
+
+.homepageButton:hover {
+  background: var(--highlightColor);
+}
+
+/* #endregion homepage*/
