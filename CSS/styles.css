@@ -25,7 +25,6 @@ body {
 
 /* #region HEADER LAYOUT */
 header {
-  grid-area: header;
   position: fixed;
   width: 100%;
 }
@@ -78,7 +77,6 @@ header {
 }
 
 .topNav a:hover {
-  /* border-bottom: solid var(--mainColor) 2px; */
   color: var(--mainColor);
 }
 
@@ -110,9 +108,10 @@ header {
       #00000000 55%,
       var(--backgroundColor) 90%
     ),
-    /* #000000e8 */ url(../Assets/Images/Placeholders/placeholderImage1.jpeg);
+    url(../Assets/Images/Placeholders/placeholderImage1.jpeg);
   /* Move this to each page ^^^^^ */
   grid-area: image;
+  margin-top: 2em;
   width: 100%;
   height: 100vh;
   background-size: cover;
@@ -140,7 +139,6 @@ header {
 
 .arrowDown i {
   color: var(--generalTextColor);
-  /* background-image: radial-gradient(#9112129c 10%, #0000003d); */
   padding: 0.5em;
   border-radius: 90px;
   font-size: 2em;
@@ -167,7 +165,6 @@ footer {
   display: grid;
   gap: 2em;
   grid-template-areas:
-    "header"
     "image"
     "left"
     "main1"
@@ -183,7 +180,6 @@ footer {
   .homepage-grid-container {
     grid-template-columns: 1fr 25em 25em 1fr;
     grid-template-areas:
-      "header header header header"
       "image image image image"
       "left main1 main2 right"
       "left main3 main4 right"
