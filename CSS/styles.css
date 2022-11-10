@@ -119,6 +119,7 @@ header {
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .pageInformation {
