@@ -8,6 +8,8 @@
   --secondaryColor: #edcbb1;
   --buttonColor: #232323;
   --highlightColor: #505050;
+
+  --headerHight: 5em;
 }
 
 * {
@@ -27,6 +29,8 @@ body {
 header {
   position: fixed;
   width: 100%;
+  top: 0;
+  left: 0;
 }
 
 .desktopHeader {
@@ -103,7 +107,7 @@ header {
 /* #region TITLE & IMAGE LAYOUT */
 .mainImg {
   background-image: linear-gradient(
-      var(--backgroundColor) 10%,
+      var(--backgroundColor),
       #00000000 45%,
       #00000000 55%,
       var(--backgroundColor) 90%
@@ -113,7 +117,7 @@ header {
   grid-area: image;
   margin-top: 2em;
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - var(--headerHight));
   background-size: cover;
   background-position: right;
   background-repeat: no-repeat;
@@ -165,6 +169,7 @@ footer {
   /* For mobile & tablet */
   display: grid;
   gap: 2em;
+  margin-top: var(--headerHight);
   grid-template-areas:
     "image"
     "left"

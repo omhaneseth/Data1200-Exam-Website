@@ -21,32 +21,32 @@
     />
   </head>
   <body>
-    <div class="homepage-grid-container">
-      <header>
-        <div class="desktopHeader">
-          <h1><a href="#">Peber</a></h1>
-          <nav class="topNav">
-            <a
-              href="javascript:void(0);"
-              class="icon"
-              onclick="mobileMenuButton()"
-              ><i class="fa-solid fa-bars"></i
-            ></a>
-            <a href="#" class="activePage">Hjem</a>
-            <a href="#">Booking</a>
-            <a href="#">Pølseri</a>
-            <a href="#">Accessibility</a>
-            <a href="#">Topical</a>
-          </nav>
-        </div>
-        <nav class="mobileNav" id="theMobileNav">
+    <header>
+      <div class="desktopHeader">
+        <h1><a href="#">Peber</a></h1>
+        <nav class="topNav">
+          <a
+            href="javascript:void(0);"
+            class="icon"
+            onclick="mobileMenuButton()"
+            ><i class="fa-solid fa-bars"></i
+          ></a>
           <a href="#" class="activePage">Hjem</a>
           <a href="#">Booking</a>
           <a href="#">Pølseri</a>
           <a href="#">Accessibility</a>
           <a href="#">Topical</a>
         </nav>
-      </header>
+      </div>
+      <nav class="mobileNav" id="theMobileNav">
+        <a href="#" class="activePage">Hjem</a>
+        <a href="#">Booking</a>
+        <a href="#">Pølseri</a>
+        <a href="#">Accessibility</a>
+        <a href="#">Topical</a>
+      </nav>
+    </header>
+    <div class="homepage-grid-container">
       <div class="mainImg">
         <div class="pageInformation">
           <h1>Peber</h1>
@@ -55,9 +55,9 @@
             akerselva. Her vil du finne alt du trengertil selskap og fest.
           </p>
         </div>
-        <div class="arrowDown">
-          <a href="#main"><i class="fa-solid fa-angles-down"></i></a>
-        </div>
+        <a href="#main" class="arrowDown"
+          ><i class="fa-solid fa-angles-down"></i
+        ></a>
       </div>
       <div class="homepageButton homepageButton1" id="main">
         <a href="#">
