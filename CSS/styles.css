@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300&display=swap");
+
 /* #region MASTER STYLES  */
 :root {
   /* Variables containing our website colors. 
@@ -22,6 +24,7 @@
 body {
   background: var(--backgroundColor);
   color: var(--generalTextColor);
+  font-family: "Roboto", sans-serif;
 }
 /* #endregion Master Styles */
 
@@ -44,7 +47,7 @@ header {
   display: none;
 }
 
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 850px) {
   /* For mobile */
   .topNav a {
     display: none;
@@ -67,7 +70,9 @@ header {
 .desktopHeader h1 a {
   text-decoration: none;
   color: var(--mainColor);
-  font-size: 2em;
+  font-size: 1.4em;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
 }
 
 .topNav a,
@@ -75,7 +80,7 @@ header {
   text-decoration: none;
   color: var(--generalTextColor);
   font-size: 1.4em;
-  margin: 0 1em;
+  margin: 0 0.5em;
   border-bottom: solid 2px #00000000;
   transition: all 0.3s;
 }
@@ -135,6 +140,10 @@ header {
   text-align: center;
 }
 
+.mainImg > .imageCredits {
+  margin: 0 2em 4em 2em;
+}
+
 /* #endregion title & image layout */
 
 /* #region TITLE & IMAGE STYLING */
@@ -152,6 +161,10 @@ header {
 .arrowDown i:hover {
   color: var(--mainColor);
 }
+
+.imageCredits a {
+  color: var(--generalTextColor);
+}
 /* #endregion title & image styling */
 
 /* #region FOOTER LAYOUT */
@@ -165,45 +178,41 @@ footer {
 /* #endregion Footer Layout */
 
 /* #region HOMEPAGE*/
-.homepage-grid-container {
-  /* For mobile & tablet */
+.grid-container {
   display: grid;
   gap: 2em;
   margin-top: var(--headerHight);
+  grid-template-columns: auto 30vw 30vw auto;
   grid-template-areas:
-    "image"
-    "left"
-    "main1"
-    "main2"
-    "main3"
-    "main4"
-    "right"
-    "footer";
+    "image image image image"
+    "left main1 main2 right"
+    "left main3 main4 right"
+    "footer footer footer footer";
 }
 
-@media screen and (min-width: 940px) {
-  /* For Large desktop */
-  .homepage-grid-container {
-    grid-template-columns: 1fr 25em 25em 1fr;
+@media screen and (max-width: 850px) {
+  .grid-container {
+    grid-template-columns: 1fr;
     grid-template-areas:
-      "image image image image"
-      "left main1 main2 right"
-      "left main3 main4 right"
-      "footer footer footer footer";
+      "image"
+      "left"
+      "main1"
+      "main2"
+      "main3"
+      "main4"
+      "right"
+      "footer";
   }
-}
-
-@media screen and (max-width: 500px) {
-  /* For mobile */
-  .homepageButton,
-  .homepageButton img {
-    width: 100% !important;
-    border-radius: 0 !important;
-  }
-
   footer {
     /* Temporary for testing */
     display: none;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  /* For desktop */
+  .homepage-container {
+    grid-template-columns: auto 30em 30em auto;
   }
 }
 
@@ -224,28 +233,35 @@ footer {
 }
 
 .homepageButton {
-  width: 25em;
+  max-width: 30em;
+  width: 100%;
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   background: var(--buttonColor);
-  border-radius: 25px 60px 25px 60px;
+  border-radius: 25px;
 }
 
 .homepageButton img {
-  width: 25em;
-  border-radius: 25px 60px 0 0;
+  width: 100%;
+  border-radius: 25px 25px 0 0;
 }
 
 .homepageButton h2 {
-  font-size: 2em;
-  padding: 0.4em;
+  font-size: 1.5em;
+  padding: 0.8em 0 0.4em 0;
 }
 
-.homepageButton a {
+.homepageButton h2 a {
   color: var(--generalTextColor);
   text-decoration: none;
+}
+
+.homepageButton .imageCredits {
+  font-weight: 300;
+  margin: 0 0.6em 0 0.6em;
+  /* text-shadow: 1px 1px 4px #000000; */
 }
 
 .homepageButton:hover {
