@@ -23,7 +23,7 @@
   <body>
     <header>
       <div class="desktopHeader">
-        <h1><a href="#">Peber</a></h1>
+        <h1><a href="./index.html">Peber</a></h1>
         <nav class="topNav">
           <a
             href="javascript:void(0);"
@@ -31,19 +31,19 @@
             onclick="mobileMenuButton()"
             ><i class="fa-solid fa-bars"></i
           ></a>
-          <a href="#" class="activePage">Hjem</a>
-          <a href="#">Booking</a>
-          <a href="#">Pølseri</a>
-          <a href="#">Accessibility</a>
-          <a href="#">Topical</a>
+          <a href="./index.html" class="activePage">Hjem</a>
+          <a href="./Pages/booking.html">Booking</a>
+          <a href="./Pages/polseri.html">Pølseri</a>
+          <a href="./Pages/Accessibility.html">Brukertilpasning</a>
+          <a href="./Pages/Topical.html">Topical</a>
         </nav>
       </div>
       <nav class="mobileNav" id="theMobileNav">
-        <a href="#" class="activePage">Hjem</a>
-        <a href="#">Booking</a>
-        <a href="#">Pølseri</a>
-        <a href="#">Accessibility</a>
-        <a href="#">Topical</a>
+        <a href="./index.html" class="activePage">Hjem</a>
+        <a href="./Pages/booking.html">Booking</a>
+        <a href="./Pages/polseri.html">Pølseri</a>
+        <a href="./Pages/Accessibility.html">Brukertilpasning</a>
+        <a href="./Pages/Topical.html">Topical</a>
       </nav>
     </header>
     <div class="grid-container homepage-container">
@@ -52,12 +52,18 @@
           <h1>Peber</h1>
           <p>
             Velkommen til Peber! Våre lokaler ligger idyllisk plassert langs
-            akerselva. Her vil du finne alt du trengertil selskap og fest.
+            akerselva. Her vil du finne alt du trengertil selskap og fest. Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Consequatur autem
+            magni laborum vitae hic temporibus vel exercitationem consectetur
+            animi? Corrupti aliquid nulla voluptatum distinctio culpa minus
+            repellendus consectetur eveniet iusto debitis, mollitia iure, error
+            delectus, illum cumque eligendi architecto voluptate. Ea fugiat,
+            reprehenderit minus molestias illo quos quasi cumque ab.
           </p>
         </div>
-        <a href="#main" class="arrowDown"
-          ><i class="fa-solid fa-angles-down"></i
-        ></a>
+        <div class="arrowDown">
+          <a href="#main"><i class="fa-solid fa-angles-down"></i></a>
+        </div>
         <p class="imageCredits">
           Bilde av Ole Bole, hentet fra
           <a href="https://pexels.com" target="_blank">Pexels.com</a>
@@ -65,7 +71,7 @@
       </div>
       <div class="homepageButton homepageButton1" id="main">
         <div>
-          <a href="#">
+          <a href="./Pages/booking.html">
             <picture
               ><source
                 media="(min-width:851px)"
@@ -74,18 +80,18 @@
                 " />
               <img
                 src="./Assets/Images/Placeholders/BookingPlaceholder/pexels-bich-tran-760710-small.jpg"
-                alt="Pølser på grill" /></picture
+                alt="Bilde av en kalenderbok med notater" /></picture
           ></a>
           <p class="imageCredits">
             Bilde av Ole Bole, hentet fra
             <a href="https://pexels.com" target="_blank">Pexels.com</a>
           </p>
         </div>
-        <h2><a href="#">Booking</a></h2>
+        <h2><a href="./Pages/booking.html">Booking</a></h2>
       </div>
       <div class="homepageButton homepageButton2">
         <div>
-          <a href="#">
+          <a href="./Pages/polseri.html">
             <picture
               ><source
                 media="(min-width:851px)"
@@ -94,7 +100,7 @@
                 " />
               <img
                 src="./Assets/Images/Placeholders/PolseriPlaceholder/pexels-markus-spiske-4682723-small.jpg"
-                alt="Pølser på grill"
+                alt="Bilde av pølser på grill"
             /></picture>
           </a>
           <p class="imageCredits">
@@ -102,11 +108,11 @@
             <a href="https://pexels.com" target="_blank">Pexels.com</a>
           </p>
         </div>
-        <h2><a href="#">Pølseri</a></h2>
+        <h2><a href="./Pages/polseri.html">Pølseri</a></h2>
       </div>
       <div class="homepageButton homepageButton3">
         <div>
-          <a href="#">
+          <a href="./Pages/Accessibility.html">
             <picture
               ><source
                 media="(min-width:851px)"
@@ -123,11 +129,11 @@
             <a href="https://pexels.com" target="_blank">Pexels.com</a>
           </p>
         </div>
-        <h2><a href="#">Brukertilpasning</a></h2>
+        <h2><a href="./Pages/Accessibility.html">Brukertilpasning</a></h2>
       </div>
       <div class="homepageButton homepageButton4">
         <div>
-          <a href="#">
+          <a href="./Pages/Topical.html">
             <picture
               ><source
                 media="(min-width:851px)"
@@ -144,23 +150,62 @@
             <a href="https://pexels.com" target="_blank">Pexels.com</a>
           </p>
         </div>
-        <h2><a href="#">Topical</a></h2>
+        <h2><a href="./Pages/Topical.html">Topical</a></h2>
       </div>
       <footer>
-        <div>Kontakt Oss</div>
-        <div>
-          Navigasjon
+        <div class="contactInfo">
+          <h3>Kontakt Oss</h3>
+          <address>
+            <p>
+              <a href="https://goo.gl/maps/wbGdZc6X6FAp3fUh6" target="_blank"
+                >Karl Johans gate 16</a
+              ><br />0154 Oslo
+            </p>
+          </address>
+          <br />
+          <p>Daglig Leder: Ole Kantole</p>
+          <p>Epost: <a href="mailto:kontakt@peber.no">kontakt@peber.no</a></p>
+          <p>Mobil: <a href="tel:+4741232146">+47 412 321 46</a></p>
+        </div>
+        <div class="opneningHours">
+          <h3>Pølseri Åpningstider</h3>
+          <div class="openingHoursList">
+            <div>
+              <p>Mandag - Fredag</p>
+              <p>Lørdag</p>
+              <p>Søndag</p>
+            </div>
+            <div>
+              <p>09:00-20:00</p>
+              <p>10:00-18:00</p>
+              <p>10:00-16:00</p>
+            </div>
+          </div>
+        </div>
+        <div class="footerNav">
+          <h3>Navigasjon</h3>
           <nav>
-            <ul>
-              <li>Café og meny</li>
-              <li>Booking</li>
-              <li>Accessibility</li>
-              <li>Topical</li>
-            </ul>
+            <a href="./index.html">Hjem</a>
+            <a href="./Pages/Peber Pages/booking.html">Booking</a>
+            <a href="./Pages/Peber Pages/polseri.html">Pølseri</a>
+            <a href="./Pages/ExamPages/Accessibility.html">Brukertilpasning</a>
+            <a href="./Pages/ExamPages/Topical.html">Topical</a>
           </nav>
         </div>
-        <div>Åpningstider</div>
-        <div>Sosiale Medier</div>
+        <div class="socials">
+          <h3>Sosiale Medier</h3>
+          <div class="socialLinks">
+            <a href="https://facebook.com/" target="_blank" id="facebook"
+              ><i class="fa-brands fa-square-facebook"></i
+            ></a>
+            <a href="https://instagram.com/" target="_blank" id="instagram"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="https://linkedin.com/" target="_blank" id="linkedin"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+          </div>
+        </div>
       </footer>
       <script>
         function mobileMenuButton() {

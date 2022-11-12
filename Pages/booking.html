@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peber - Lokaler til alle slags arrangementer</title>
+    <link rel="icon" href="../Assets/Images/Favicon/favicon.ico" />
+    <link rel="stylesheet" href="../CSS/styles.css" />
+    <link
+      rel="stylesheet"
+      href="../Assets/Icons/fontawesome-free-6.2.0-web/css/fontawesome.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../Assets/Icons/fontawesome-free-6.2.0-web/css/brands.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../Assets/Icons/fontawesome-free-6.2.0-web/css/solid.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="desktopHeader">
+        <h1><a href="../index.html">Peber</a></h1>
+        <nav class="topNav">
+          <a
+            href="javascript:void(0);"
+            class="icon"
+            onclick="mobileMenuButton()"
+            ><i class="fa-solid fa-bars"></i
+          ></a>
+          <a href="../index.html">Hjem</a>
+          <a href="../Pages/booking.html" class="activePage">Booking</a>
+          <a href="../Pages/polseri.html">Pølseri</a>
+          <a href="../Pages/Accessibility.html">Brukertilpasning</a>
+          <a href="../Pages/Topical.html">Topical</a>
+        </nav>
+      </div>
+      <nav class="mobileNav" id="theMobileNav">
+        <a href="../index.html">Hjem</a>
+        <a href="../Pages/booking.html" class="activePage">Booking</a>
+        <a href="../Pages/polseri.html">Pølseri</a>
+        <a href="../Pages/Accessibility.html">Brukertilpasning</a>
+        <a href="../Pages/Topical.html">Topical</a>
+      </nav>
+    </header>
+    <div class="grid-container homepage-container">
+      <div class="mainImg">
+        <div class="pageInformation">
+          <h1>Booking</h1>
+          <p>
+            Vi har et pølseri som kan tilby catering ved booking av våre
+            lokaler. Pølseriet holder også åpent for alle, 09:00 til 20:00 alle
+            hverdager. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consequatur autem magni laborum vitae hic temporibus vel
+            exercitationem consectetur animi? Corrupti aliquid nulla voluptatum
+            distinctio culpa minus repellendus consectetur eveniet iusto
+            debitis, mollitia iure, error delectus, illum cumque eligendi
+            architecto voluptate. Ea fugiat, reprehenderit minus molestias illo
+            quos quasi cumque ab.
+          </p>
+        </div>
+        <div class="arrowDown">
+          <a href="#main"><i class="fa-solid fa-angles-down"></i></a>
+        </div>
+        <p class="imageCredits">
+          Bilde av Ole Bole, hentet fra
+          <a href="https://pexels.com" target="_blank">Pexels.com</a>
+        </p>
+      </div>
+      <footer>
+        <div class="contactInfo">
+          <h3>Kontakt Oss</h3>
+          <address>
+            <p>
+              <a href="https://goo.gl/maps/wbGdZc6X6FAp3fUh6" target="_blank"
+                >Karl Johans gate 16</a
+              ><br />0154 Oslo
+            </p>
+          </address>
+          <br />
+          <p>Daglig Leder: Ole Kantole</p>
+          <p>Epost: <a href="mailto:kontakt@peber.no">kontakt@peber.no</a></p>
+          <p>Mobil: <a href="tel:+4741232146">+47 412 321 46</a></p>
+        </div>
+        <div class="opneningHours">
+          <h3>Pølseri Åpningstider</h3>
+          <div class="openingHoursList">
+            <div>
+              <p>Mandag - Fredag</p>
+              <p>Lørdag</p>
+              <p>Søndag</p>
+            </div>
+            <div>
+              <p>09:00-20:00</p>
+              <p>10:00-18:00</p>
+              <p>10:00-16:00</p>
+            </div>
+          </div>
+        </div>
+        <div class="footerNav">
+          <h3>Navigasjon</h3>
+          <nav>
+            <a href="./index.html">Hjem</a>
+            <a href="./Pages/Peber Pages/booking.html">Booking</a>
+            <a href="./Pages/Peber Pages/polseri.html">Pølseri</a>
+            <a href="./Pages/ExamPages/Accessibility.html">Brukertilpasning</a>
+            <a href="./Pages/ExamPages/Topical.html">Topical</a>
+          </nav>
+        </div>
+        <div class="socials">
+          <h3>Sosiale Medier</h3>
+          <div class="socialLinks">
+            <a href="https://facebook.com/" target="_blank" id="facebook"
+              ><i class="fa-brands fa-square-facebook"></i
+            ></a>
+            <a href="https://instagram.com/" target="_blank" id="instagram"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="https://linkedin.com/" target="_blank" id="linkedin"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+          </div>
+        </div>
+      </footer>
+      <script>
+        function mobileMenuButton() {
+          var x = document.getElementById("theMobileNav");
+          if (x.className === "mobileNav") {
+            x.className += " showMenu";
+          } else {
+            x.className = "mobileNav";
+          }
+        }
+      </script>
+    </div>
+  </body>
+</html>
