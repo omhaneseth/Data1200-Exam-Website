@@ -39,15 +39,12 @@ body {
   display: grid;
   gap: 2em;
   margin-top: var(--headerHight);
-  grid-template-areas:
-    "image image image image"
-    "left main1 main2 right"
-    "left main3 main4 right"
-    "footer footer footer footer";
+  /* Grid template areas ligger i side-spesifikk container*/
 }
 
 @media screen and (max-width: 850px) {
-  .grid-container {
+  .homepage-container,
+  .polseri-container {
     grid-template-columns: 1fr !important;
     grid-template-areas:
       "image"
@@ -57,7 +54,7 @@ body {
       "main3"
       "main4"
       "right"
-      "footer";
+      "footer" !important;
   }
 }
 /* #endregion general layout */
@@ -310,6 +307,11 @@ footer h3 {
 }
 
 .homepage-container {
+  grid-template-areas:
+    "image image image image"
+    "left main1 main2 right"
+    "left main3 main4 right"
+    "footer footer footer footer";
   grid-template-columns: auto 30vw 30vw auto;
 }
 
@@ -376,24 +378,26 @@ footer h3 {
 
 /* #region PØLSERI */
 .polseri-container {
-  grid-template-columns: auto auto auto auto;
+  grid-template-areas:
+    "image image image"
+    "left main1 right"
+    "footer footer footer";
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
+/* Hovedbilde for siden */
 .polseriImg {
   background-image: var(--mainImgGradiant),
     url(../Assets/Images/Placeholders/PolseriPlaceholder/pexels-markus-spiske-4682723.jpg);
 }
 
-.polseriMain {
-  grid-area: main1 / main1 / main1 / main2;
-  display: flex;
-  flex-direction: row;
-  gap: 2em;
-}
-
+/* Venstre boks med knapper/velgere */
 .menuList {
+  grid-area: left;
+  justify-self: right;
   background: var(--buttonColor);
   text-align: center;
+  margin: 0 0 0 2em;
   padding: 2em 0 2em 0;
   border-radius: 25px;
   height: fit-content;
@@ -424,7 +428,15 @@ footer h3 {
   border-radius: 90px;
 }
 
+.activeMenuButton {
+  background: var(--highlightColor) !important;
+  border-radius: 90px;
+}
+
+/* Selve boksen med de forskjellige menyene */
 .menuOverview {
+  grid-area: main1;
+  justify-self: center;
   display: none;
   background: var(--buttonColor);
   padding: 2em;
@@ -450,12 +462,9 @@ footer h3 {
   margin: 0 0 0 1em;
 }
 
+/* Brukt for å gjemme/vise menyene - JavaScript */
 .showOverview {
   display: block !important;
 }
 
-.activeMenuButton {
-  background: var(--highlightColor);
-  border-radius: 90px;
-}
 /* #endregion pølseri */
