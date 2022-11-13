@@ -12,6 +12,12 @@
   --highlightColor: #505050;
 
   --headerHight: 3.7em;
+  --mainImgGradiant: linear-gradient(
+    var(--backgroundColor),
+    #00000000 45%,
+    #00000000 55%,
+    var(--backgroundColor) 90%
+  );
 }
 
 * {
@@ -27,6 +33,34 @@ body {
   font-family: "Roboto", sans-serif;
 }
 /* #endregion Master Styles */
+
+/* #region GENERAL LAYOUT */
+.grid-container {
+  display: grid;
+  gap: 2em;
+  margin-top: var(--headerHight);
+  grid-template-areas:
+    "image image image image"
+    "left main1 main2 right"
+    "left main3 main4 right"
+    "footer footer footer footer";
+}
+
+@media screen and (max-width: 850px) {
+  .grid-container {
+    grid-template-columns: 1fr !important;
+    grid-template-areas:
+      "image"
+      "left"
+      "main1"
+      "main2"
+      "main3"
+      "main4"
+      "right"
+      "footer";
+  }
+}
+/* #endregion general layout */
 
 /* #region HEADER LAYOUT */
 header {
@@ -111,14 +145,6 @@ header {
 
 /* #region TITLE & IMAGE LAYOUT */
 .mainImg {
-  background-image: linear-gradient(
-      var(--backgroundColor),
-      #00000000 45%,
-      #00000000 55%,
-      var(--backgroundColor) 90%
-    ),
-    url(../Assets/Images/Placeholders/placeholderImage1.jpeg);
-  /* Move this to each page ^^^^^ */
   grid-area: image;
   margin-top: 2em;
   width: 100%;
@@ -273,31 +299,18 @@ footer h3 {
 /* #endregion footer style */
 
 /* #region HOMEPAGE*/
-.grid-container {
-  display: grid;
-  gap: 2em;
-  margin-top: var(--headerHight);
-  grid-template-columns: auto 30vw 30vw auto;
-  grid-template-areas:
-    "image image image image"
-    "left main1 main2 right"
-    "left main3 main4 right"
-    "footer footer footer footer";
+.homepageImg {
+  background-image: linear-gradient(
+      var(--backgroundColor),
+      #00000000 45%,
+      #00000000 55%,
+      var(--backgroundColor) 90%
+    ),
+    url(../Assets/Images/Placeholders/placeholderImage1.jpeg);
 }
 
-@media screen and (max-width: 850px) {
-  .grid-container {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "image"
-      "left"
-      "main1"
-      "main2"
-      "main3"
-      "main4"
-      "right"
-      "footer";
-  }
+.homepage-container {
+  grid-template-columns: auto 30vw 30vw auto;
 }
 
 @media screen and (min-width: 1600px) {
@@ -360,3 +373,89 @@ footer h3 {
 }
 
 /* #endregion homepage*/
+
+/* #region PØLSERI */
+.polseri-container {
+  grid-template-columns: auto auto auto auto;
+}
+
+.polseriImg {
+  background-image: var(--mainImgGradiant),
+    url(../Assets/Images/Placeholders/PolseriPlaceholder/pexels-markus-spiske-4682723.jpg);
+}
+
+.polseriMain {
+  grid-area: main1 / main1 / main1 / main2;
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+}
+
+.menuList {
+  background: var(--buttonColor);
+  text-align: center;
+  padding: 2em 0 2em 0;
+  border-radius: 25px;
+  height: fit-content;
+  min-width: 15em;
+  max-width: 20em;
+}
+
+.menuList h3 a {
+  margin: 0 0 0.5em 0;
+  color: var(--generalTextColor);
+  text-decoration: none;
+}
+
+.menuList button {
+  display: block;
+  border: none;
+  background: none;
+  color: var(--generalTextColor);
+  width: 100%;
+  font-size: 1.2em;
+  padding: 0.6em 0;
+  margin: 0.4em 0;
+  cursor: pointer;
+}
+
+.menuList button:hover {
+  background: var(--highlightColor);
+  border-radius: 90px;
+}
+
+.menuOverview {
+  display: none;
+  background: var(--buttonColor);
+  padding: 2em;
+  border-radius: 25px;
+  width: 100%;
+  min-width: 30em;
+  max-width: 60em;
+}
+
+.menuOverview h2 {
+  text-align: center;
+}
+
+.menuItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 2em 1em;
+}
+
+.menuItem h4 {
+  margin: 0 0 0 1em;
+}
+
+.showOverview {
+  display: block !important;
+}
+
+.activeMenuButton {
+  background: var(--highlightColor);
+  border-radius: 90px;
+}
+/* #endregion pølseri */

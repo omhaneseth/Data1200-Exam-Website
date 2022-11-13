@@ -46,8 +46,8 @@
         <a href="../Pages/Topical.html">Topical</a>
       </nav>
     </header>
-    <div class="grid-container homepage-container">
-      <div class="mainImg">
+    <div class="grid-container polseri-container">
+      <div class="mainImg polseriImg">
         <div class="pageInformation">
           <h1>Våres Pølseri</h1>
           <p>
@@ -70,6 +70,130 @@
           <a href="https://pexels.com" target="_blank">Pexels.com</a>
         </p>
       </div>
+      <main class="polseriMain">
+        <div class="menuList">
+          <h3>
+            <a href="javascript:void(0)" onclick="frontButton()">Våre Menyer</a>
+          </h3>
+          <button href="javascript:void(0)" onclick="breakfastButton()">
+            Frokost
+          </button>
+          <button href="javascript:void(0)" onclick="dinnerButton()">
+            Middag
+          </button>
+          <button href="javascript:void(0)" onclick="snacksButton()">
+            Snacks
+          </button>
+        </div>
+        <div id="frontMenu" class="menuOverview showOverview">
+          <h2>Front</h2>
+          <div class="menuItem">
+            <div>
+              <h3>Pølsegrateng</h3>
+              <p>Klassisk pølsegrateng med pasta</p>
+              <p>Allergener: Gluten</p>
+            </div>
+            <h4>380 kr</h4>
+          </div>
+          <div class="menuItem">
+            <div>
+              <h3>Pølsegrateng</h3>
+              <p>Klassisk pølsegrateng med pasta</p>
+              <p>Allergener: Gluten</p>
+            </div>
+            <h4>380 kr</h4>
+          </div>
+          <div class="menuItem">
+            <div>
+              <h3>Pølsegrateng</h3>
+              <p>Klassisk pølsegrateng med pasta</p>
+              <p>Allergener: Gluten</p>
+            </div>
+            <h4>380 kr</h4>
+          </div>
+        </div>
+        <div id="breakfastMenu" class="menuOverview">
+          <h2>Frokostmeny</h2>
+          <div class="menuItem">
+            <div>
+              <h3>Pølsegrateng</h3>
+              <p>Klassisk pølsegrateng med pasta</p>
+              <p>Allergener: Gluten</p>
+            </div>
+            <h4>380 kr</h4>
+          </div>
+          <div class="menuItem">
+            <div>
+              <h3>Pølsegrateng</h3>
+              <p>Klassisk pølsegrateng med pasta</p>
+              <p>Allergener: Gluten</p>
+            </div>
+            <h4>380 kr</h4>
+          </div>
+          <div class="menuItem">
+            <div>
+              <h3>Pølsegrateng</h3>
+              <p>Klassisk pølsegrateng med pasta</p>
+              <p>Allergener: Gluten</p>
+            </div>
+            <h4>380 kr</h4>
+          </div>
+        </div>
+        <div id="dinnerMenu" class="menuOverview">
+          <h2>Snaksmeny</h2>
+          <div class="menuItem">
+            <div>
+              <h3>Pølsegrateng</h3>
+              <p>Klassisk pølsegrateng med pasta</p>
+              <p>Allergener: Gluten</p>
+            </div>
+            <h4>380 kr</h4>
+          </div>
+          <div class="menuItem">
+            <div>
+              <h3>Pølsegrateng</h3>
+              <p>Klassisk pølsegrateng med pasta</p>
+              <p>Allergener: Gluten</p>
+            </div>
+            <h4>380 kr</h4>
+          </div>
+          <div class="menuItem">
+            <div>
+              <h3>Pølsegrateng</h3>
+              <p>Klassisk pølsegrateng med pasta</p>
+              <p>Allergener: Gluten</p>
+            </div>
+            <h4>380 kr</h4>
+          </div>
+        </div>
+        <div id="snacksMenu" class="menuOverview">
+          <h2>Middagsmeny</h2>
+          <div class="menuItem">
+            <div>
+              <h3>Pølsegrateng</h3>
+              <p>Klassisk pølsegrateng med pasta</p>
+              <p>Allergener: Gluten</p>
+            </div>
+            <h4>380 kr</h4>
+          </div>
+          <div class="menuItem">
+            <div>
+              <h3>Pølsegrateng</h3>
+              <p>Klassisk pølsegrateng med pasta</p>
+              <p>Allergener: Gluten</p>
+            </div>
+            <h4>380 kr</h4>
+          </div>
+          <div class="menuItem">
+            <div>
+              <h3>Pølsegrateng</h3>
+              <p>Klassisk pølsegrateng med pasta</p>
+              <p>Allergener: Gluten</p>
+            </div>
+            <h4>380 kr</h4>
+          </div>
+        </div>
+      </main>
       <footer>
         <div class="contactInfo">
           <h3>Kontakt Oss</h3>
@@ -103,11 +227,11 @@
         <div class="footerNav">
           <h3>Navigasjon</h3>
           <nav>
-            <a href="./index.html">Hjem</a>
-            <a href="./Pages/Peber Pages/booking.html">Booking</a>
-            <a href="./Pages/Peber Pages/polseri.html">Pølseri</a>
-            <a href="./Pages/ExamPages/Accessibility.html">Brukertilpasning</a>
-            <a href="./Pages/ExamPages/Topical.html">Topical</a>
+            <a href="../index.html">Hjem</a>
+            <a href="../Pages/booking.html">Booking</a>
+            <a href="../Pages/polseri.html">Pølseri</a>
+            <a href="../Pages/Accessibility.html">Brukertilpasning</a>
+            <a href="../Pages/Topical.html">Topical</a>
           </nav>
         </div>
         <div class="socials">
@@ -132,6 +256,62 @@
             x.className += " showMenu";
           } else {
             x.className = "mobileNav";
+          }
+        }
+
+        function frontButton() {
+          var front = document.getElementById("frontMenu");
+          var dinner = document.getElementById("dinnerMenu");
+          var breakfast = document.getElementById("breakfastMenu");
+          var snacks = document.getElementById("snacksMenu");
+
+          if (front.className === "menuOverview") {
+            front.className += " showOverview";
+            dinner.className = "menuOverview";
+            snacks.className = "menuOverview";
+            breakfast.className = "menuOverview";
+          }
+        }
+
+        function breakfastButton() {
+          var front = document.getElementById("frontMenu");
+          var dinner = document.getElementById("dinnerMenu");
+          var breakfast = document.getElementById("breakfastMenu");
+          var snacks = document.getElementById("snacksMenu");
+
+          if (breakfast.className === "menuOverview") {
+            breakfast.className += " showOverview";
+            dinner.className = "menuOverview";
+            snacks.className = "menuOverview";
+            front.className = "menuOverview";
+          }
+        }
+
+        function dinnerButton() {
+          var front = document.getElementById("frontMenu");
+          var dinner = document.getElementById("dinnerMenu");
+          var breakfast = document.getElementById("breakfastMenu");
+          var snacks = document.getElementById("snacksMenu");
+
+          if (dinner.className === "menuOverview") {
+            dinner.className += " showOverview";
+            breakfast.className = "menuOverview";
+            snacks.className = "menuOverview";
+            front.className = "menuOverview";
+          }
+        }
+
+        function snacksButton() {
+          var front = document.getElementById("frontMenu");
+          var dinner = document.getElementById("dinnerMenu");
+          var breakfast = document.getElementById("breakfastMenu");
+          var snacks = document.getElementById("snacksMenu");
+
+          if (snacks.className === "menuOverview") {
+            snacks.className += " showOverview";
+            breakfast.className = "menuOverview";
+            dinner.className = "menuOverview";
+            front.className = "menuOverview";
           }
         }
       </script>
