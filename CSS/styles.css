@@ -367,7 +367,6 @@ footer h3 {
 .homepageButton .imageCredits {
   font-weight: 300;
   margin: 0 0.6em 0 0.6em;
-  /* text-shadow: 1px 1px 4px #000000; */
 }
 
 .homepageButton:hover {
@@ -412,7 +411,9 @@ footer h3 {
 }
 
 .menuList button {
-  display: block;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
   border: none;
   background: none;
   color: var(--generalTextColor);
@@ -426,6 +427,16 @@ footer h3 {
 .menuList button:hover {
   background: var(--highlightColor);
   border-radius: 90px;
+}
+
+.menuList button p {
+  grid-column-start: 2;
+  justify-self: center;
+}
+
+.menuListArrow {
+  display: none;
+  font-size: 2em;
 }
 
 .activeMenuButton {
@@ -462,9 +473,48 @@ footer h3 {
   margin: 0 0 0 1em;
 }
 
+/* Boksen med menyene - for mobil */
+.mobileMenuOverview {
+  display: none;
+}
+
 /* Brukt for å gjemme/vise menyene - JavaScript */
 .showOverview {
-  display: block !important;
+  display: block;
+}
+
+.showOverviewMobile {
+  display: none;
+}
+
+/* Skifter om på hva som vises på mobil */
+@media screen and (max-width: 850px) {
+  .menuList {
+    justify-self: center;
+    width: 100%;
+    max-width: 35em;
+    margin: 0;
+  }
+
+  .showOverview {
+    display: none;
+  }
+
+  #arrowDown {
+    display: inline;
+  }
+
+  .showOverviewMobile {
+    display: block;
+  }
+
+  .activeMenuButton #arrowDown {
+    display: none !important;
+  }
+
+  .activeMenuButton #arrowUp {
+    display: inline !important;
+  }
 }
 
 /* #endregion pølseri */
