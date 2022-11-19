@@ -19,231 +19,175 @@
       rel="stylesheet"
       href="../Assets/Icons/fontawesome-free-6.2.0-web/css/solid.css"
     />
-    <script src="../JavaScripts/polseriMenuButtons.js"></script>
     <script src="../JavaScripts/mobileHeaderButton.js"></script>
   </head>
   <body>
-    <header>
-      <div class="desktopHeader">
-        <h1><a href="../index.html">Peber</a></h1>
-        <nav class="topNav">
-          <a
-            href="javascript:void(0);"
-            class="icon"
-            onclick="mobileMenuButton()"
-            ><i class="fa-solid fa-bars"></i
-          ></a>
+    <div class="page-container">
+      <header>
+        <div class="desktopHeader">
+          <h1><a href="../index.html">Peber</a></h1>
+          <nav class="topNav">
+            <a
+              href="javascript:void(0);"
+              class="icon"
+              onclick="mobileMenuButton()"
+              ><i class="fa-solid fa-bars"></i
+            ></a>
+            <a href="../index.html">Hjem</a>
+            <a href="../Pages/booking.html">Booking</a>
+            <a href="../Pages/polseri.html" class="activePage">Pølseri</a>
+            <a href="../Pages/Accessibility.html">Brukertilpasning</a>
+            <a href="../Pages/Topical.html">Topical</a>
+          </nav>
+        </div>
+        <nav class="mobileNav" id="theMobileNav">
           <a href="../index.html">Hjem</a>
           <a href="../Pages/booking.html">Booking</a>
           <a href="../Pages/polseri.html" class="activePage">Pølseri</a>
           <a href="../Pages/Accessibility.html">Brukertilpasning</a>
           <a href="../Pages/Topical.html">Topical</a>
         </nav>
-      </div>
-      <nav class="mobileNav" id="theMobileNav">
-        <a href="../index.html">Hjem</a>
-        <a href="../Pages/booking.html">Booking</a>
-        <a href="../Pages/polseri.html" class="activePage">Pølseri</a>
-        <a href="../Pages/Accessibility.html">Brukertilpasning</a>
-        <a href="../Pages/Topical.html">Topical</a>
-      </nav>
-    </header>
-    <div class="grid-container polseri-container">
+      </header>
       <div class="mainImg polseriImg">
         <div class="pageInformation">
-          <h1>Våres Pølseri</h1>
+          <h1>Peber's Pølseri</h1>
           <p>
-            Vi har et pølseri som kan tilby catering ved booking av våre
-            lokaler. Pølseriet holder også åpent for alle, 09:00 til 20:00 alle
-            hverdager. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Consequatur autem magni laborum vitae hic temporibus vel
-            exercitationem consectetur animi? Corrupti aliquid nulla voluptatum
-            distinctio culpa minus repellendus consectetur eveniet iusto
-            debitis, mollitia iure, error delectus, illum cumque eligendi
-            architecto voluptate. Ea fugiat, reprehenderit minus molestias illo
-            quos quasi cumque ab.
+            Vi har et pølseri som er åpent for alle, med eller uten booking av
+            våre lokaler. Vi har en frokostmeny som er tilgjengeilig alle dager
+            frem til 12:00, og en middagsmeny som er tilgjengelig fra 12:00 og
+            utover. Vår snacks meny og drikke meny er alltid tilgjengelig i våre
+            åpningstider.
           </p>
+          <div class="polseriOpeningHours">
+            <h2>Pølseriets åpningstider</h2>
+            <div>
+              <div>
+                <p>Mandag - Fredag</p>
+                <p>09:00 til 20:00</p>
+              </div>
+              <div>
+                <p>Lørdag - Søndag</p>
+                <p>10:00 til 18:00</p>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="arrowDown">
-          <a href="#main"><i class="fa-solid fa-angles-down"></i></a>
+          <a href="#breakfastMenu"><i class="fa-solid fa-angles-down"></i></a>
         </div>
         <p class="imageCredits">
           Bilde av Ole Bole, hentet fra
           <a href="https://pexels.com" target="_blank">Pexels.com</a>
         </p>
       </div>
-
-      <div class="menuList">
-        <h3>
-          <a href="javascript:void(0)" onclick="frontButton()">Våre Menyer</a>
-        </h3>
-        <button onclick="breakfastButton()" id="breakfastButton">
-          <p>Frokost</p>
-          <span class="menuListArrow showMenuListArrow" id="arrowDown"
-            ><i class="fa-solid fa-caret-down"></i
-          ></span>
-          <span class="menuListArrow" id="arrowUp"
-            ><i class="fa-solid fa-caret-up"></i
-          ></span>
-        </button>
-        <div id="mobileBreakfastMenu" class="mobileMenuOverview">
+      <main class="polseriMenu">
+        <div id="breakfastMenu" class="menuOverview">
           <h2>Frokostmeny</h2>
-          <div class="MobileMenuItem">
-            <h3>Pølsegrateng <span>380 kr</span></h3>
-            <p>Klassisk pølsegrateng med pasta</p>
-            <p>Allergener: Gluten</p>
+          <div class="menuItem">
+            <div>
+              <h3>Korv i potatis</h3>
+              <p>Pølse og potetstappe</p>
+              <p><i>Allergener: Gluten, laktose, nøtter</i></p>
+            </div>
+            <h4>90 kr</h4>
           </div>
-          <div class="MobileMenuItem">
-            <h3>Pølsegrateng <span>380 kr</span></h3>
-            <p>Klassisk pølsegrateng med pasta</p>
-            <p>Allergener: Gluten</p>
+          <div class="menuItem">
+            <div>
+              <h3>Gratinerte pølser</h3>
+              <p>Ostegrill i brød</p>
+              <p><i>Allergener: Gluten, laktose</i></p>
+            </div>
+            <h4>200 kr</h4>
           </div>
-          <div class="MobileMenuItem">
-            <h3>Pølsegrateng <span>380 kr</span></h3>
-            <p>Klassisk pølsegrateng med pasta</p>
-            <p>Allergener: Gluten</p>
+          <div class="menuItem">
+            <div>
+              <h3>Bratwurst med fries</h3>
+              <p>Tysk bratwurst med pommes frites</p>
+              <p><i>Allergener: Gluten</i></p>
+            </div>
+            <h4>190 kr</h4>
           </div>
         </div>
-        <button onclick="dinnerButton()" id="dinnerButton">
-          <p>Middag</p>
-          <span class="menuListArrow showMenuListArrow" id="arrowDown"
-            ><i class="fa-solid fa-caret-down"></i
-          ></span>
-          <span class="menuListArrow" id="arrowUp"
-            ><i class="fa-solid fa-caret-up"></i
-          ></span>
-        </button>
-        <div id="mobileDinnerMenu" class="mobileMenuOverview">
+        <div id="dinnerMenu" class="menuOverview">
           <h2>Middagsmeny</h2>
-          <div class="MobileMenuItem">
-            <h3>Pølsegrateng <span>380 kr</span></h3>
-            <p>Klassisk pølsegrateng med pasta</p>
-            <p>Allergener: Gluten</p>
+          <div class="menuItem">
+            <div>
+              <h3>Pølsegrateng</h3>
+              <p>Klassisk pølsegrateng med pasta</p>
+              <p><i>Allergener: Gluten</i></p>
+            </div>
+            <h4>280 kr</h4>
           </div>
-          <div class="MobileMenuItem">
-            <h3>Pølsegrateng <span>380 kr</span></h3>
-            <p>Klassisk pølsegrateng med pasta</p>
-            <p>Allergener: Gluten</p>
+          <div class="menuItem">
+            <div>
+              <h3>Chorizo</h3>
+              <p>Spansk pølse med surkål</p>
+              <p><i>Allergener: Gluten, nøtter</i></p>
+            </div>
+            <h4>260 kr</h4>
           </div>
-          <div class="MobileMenuItem">
-            <h3>Pølsegrateng <span>380 kr</span></h3>
-            <p>Klassisk pølsegrateng med pasta</p>
-            <p>Allergener: Gluten</p>
+          <div class="menuItem">
+            <div>
+              <h3>Pølsetallerken</h3>
+              <p>Winerpølser i potetmos med remulade og sopp</p>
+              <p><i>Allergener: Gluten</i></p>
+            </div>
+            <h4>220 kr</h4>
           </div>
         </div>
-        <button onclick="snacksButton()" id="snacksButton">
-          <p>Snacks</p>
-          <span class="menuListArrow showMenuListArrow" id="arrowDown"
-            ><i class="fa-solid fa-caret-down"></i
-          ></span>
-          <span class="menuListArrow" id="arrowUp"
-            ><i class="fa-solid fa-caret-up"></i
-          ></span>
-        </button>
-        <div id="mobileSnacksMenu" class="mobileMenuOverview">
+        <div id="snacksMenu" class="menuOverview">
           <h2>Snacksmeny</h2>
-          <div class="MobileMenuItem">
-            <h3>Pølsegrateng <span>380 kr</span></h3>
-            <p>Klassisk pølsegrateng med pasta</p>
-            <p>Allergener: Gluten</p>
+          <div class="menuItem">
+            <div>
+              <h3>Snackspølse med potet</h3>
+              <p>Lokal småpølse med potetsalat</p>
+              <p><i>Allergener: Gluten, laktose</i></p>
+            </div>
+            <h4>120 kr</h4>
           </div>
-          <div class="MobileMenuItem">
-            <h3>Pølsegrateng <span>380 kr</span></h3>
-            <p>Klassisk pølsegrateng med pasta</p>
-            <p>Allergener: Gluten</p>
+          <div class="menuItem">
+            <div>
+              <h3>Pølse i brød/lompe</h3>
+              <p>Du kan velge mellom brød eller lompe</p>
+              <p><i>Allergener: Gluten</i></p>
+            </div>
+            <h4>50 kr</h4>
           </div>
-          <div class="MobileMenuItem">
-            <h3>Pølsegrateng <span>380 kr</span></h3>
-            <p>Klassisk pølsegrateng med pasta</p>
-            <p>Allergener: Gluten</p>
+          <div class="menuItem">
+            <div>
+              <h3>Pommes frites</h3>
+              <p>Strimlede poteter som er frityrstekt</p>
+              <p><i>Allergener: Gluten</i></p>
+            </div>
+            <h4>40 kr</h4>
           </div>
         </div>
-      </div>
-      <div id="frontMenu" class="menuOverview showOverview">
-        <h2>Front</h2>
-      </div>
-      <div id="breakfastMenu" class="menuOverview">
-        <h2>Frokostmeny</h2>
-        <div class="menuItem">
-          <div>
-            <h3>Pølsegrateng</h3>
-            <p>Klassisk pølsegrateng med pasta</p>
-            <p>Allergener: Gluten</p>
+        <div id="drinkMenu" class="menuOverview">
+          <h2>Drikke</h2>
+          <div class="menuItem">
+            <div>
+              <h3>Mineralvann 0,5</h3>
+              <p><i>Cola, Fanta, Sprite</i></p>
+            </div>
+            <h4>70 kr</h4>
           </div>
-          <h4>380 kr</h4>
-        </div>
-        <div class="menuItem">
-          <div>
-            <h3>Pølsegrateng</h3>
-            <p>Klassisk pølsegrateng med pasta</p>
-            <p>Allergener: Gluten</p>
+          <div class="menuItem">
+            <div>
+              <h3>Kaffe</h3>
+              <p>Espresso, Frappuccino, Iskaffe</p>
+              <p><i>Allergener: Laktose, hvete, bygg</i></p>
+            </div>
+            <h4>50 kr</h4>
           </div>
-          <h4>380 kr</h4>
-        </div>
-        <div class="menuItem">
-          <div>
-            <h3>Pølsegrateng</h3>
-            <p>Klassisk pølsegrateng med pasta</p>
-            <p>Allergener: Gluten</p>
+          <div class="menuItem">
+            <div>
+              <h3>Øl 0,5</h3>
+              <p><i>Allergener: Bygg</i></p>
+            </div>
+            <h4>100 kr</h4>
           </div>
-          <h4>380 kr</h4>
         </div>
-      </div>
-      <div id="dinnerMenu" class="menuOverview">
-        <h2>Middagsmeny</h2>
-        <div class="menuItem">
-          <div>
-            <h3>Pølsegrateng</h3>
-            <p>Klassisk pølsegrateng med pasta</p>
-            <p>Allergener: Gluten</p>
-          </div>
-          <h4>380 kr</h4>
-        </div>
-        <div class="menuItem">
-          <div>
-            <h3>Pølsegrateng</h3>
-            <p>Klassisk pølsegrateng med pasta</p>
-            <p>Allergener: Gluten</p>
-          </div>
-          <h4>380 kr</h4>
-        </div>
-        <div class="menuItem">
-          <div>
-            <h3>Pølsegrateng</h3>
-            <p>Klassisk pølsegrateng med pasta</p>
-            <p>Allergener: Gluten</p>
-          </div>
-          <h4>380 kr</h4>
-        </div>
-      </div>
-      <div id="snacksMenu" class="menuOverview">
-        <h2>Snacksmeny</h2>
-        <div class="menuItem">
-          <div>
-            <h3>Pølsegrateng</h3>
-            <p>Klassisk pølsegrateng med pasta</p>
-            <p>Allergener: Gluten</p>
-          </div>
-          <h4>380 kr</h4>
-        </div>
-        <div class="menuItem">
-          <div>
-            <h3>Pølsegrateng</h3>
-            <p>Klassisk pølsegrateng med pasta</p>
-            <p>Allergener: Gluten</p>
-          </div>
-          <h4>380 kr</h4>
-        </div>
-        <div class="menuItem">
-          <div>
-            <h3>Pølsegrateng</h3>
-            <p>Klassisk pølsegrateng med pasta</p>
-            <p>Allergener: Gluten</p>
-          </div>
-          <h4>380 kr</h4>
-        </div>
-      </div>
-
+      </main>
       <footer>
         <div class="contactInfo">
           <h3>Kontakt Oss</h3>
@@ -264,13 +208,11 @@
           <div class="openingHoursList">
             <div>
               <p>Mandag - Fredag</p>
-              <p>Lørdag</p>
-              <p>Søndag</p>
+              <p>Lørdag - Søndag</p>
             </div>
             <div>
               <p>09:00-20:00</p>
               <p>10:00-18:00</p>
-              <p>10:00-16:00</p>
             </div>
           </div>
         </div>

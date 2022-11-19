@@ -11,7 +11,8 @@
   --buttonColor: #232323;
   --highlightColor: #505050;
 
-  --headerHight: 3.7em;
+  --headerHight: 6em;
+
   --mainImgGradiant: linear-gradient(
     var(--backgroundColor),
     #00000000 45%,
@@ -24,7 +25,7 @@
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  scroll-margin-top: 8rem;
+  scroll-margin-top: var(--headerHight);
 }
 
 body {
@@ -32,32 +33,12 @@ body {
   color: var(--generalTextColor);
   font-family: "Roboto", sans-serif;
 }
-/* #endregion Master Styles */
 
-/* #region GENERAL LAYOUT */
-.grid-container {
-  display: grid;
-  gap: 2em;
+.page-container {
   margin-top: var(--headerHight);
-  /* Grid template areas ligger i side-spesifikk container*/
 }
 
-@media screen and (max-width: 850px) {
-  .homepage-container,
-  .polseri-container {
-    grid-template-columns: 1fr !important;
-    grid-template-areas:
-      "image"
-      "left"
-      "main1"
-      "main2"
-      "main3"
-      "main4"
-      "right"
-      "footer" !important;
-  }
-}
-/* #endregion general layout */
+/* #endregion Master Styles */
 
 /* #region HEADER LAYOUT */
 header {
@@ -179,6 +160,12 @@ header {
   margin: 1em 0;
   font-size: 3em;
   text-shadow: 2px 1px 10px #000000ee;
+}
+
+.pageInformation h2 {
+  font-size: 1.6em;
+  margin: 0.4em;
+  text-shadow: 2px 2px 3px #000000;
 }
 
 .pageInformation p {
@@ -306,47 +293,38 @@ footer h3 {
     url(../Assets/Images/Placeholders/placeholderImage1.jpeg);
 }
 
-.homepage-container {
-  grid-template-areas:
-    "image image image image"
-    "left main1 main2 right"
-    "left main3 main4 right"
-    "footer footer footer footer";
-  grid-template-columns: auto 30vw 30vw auto;
-}
-
-@media screen and (min-width: 1600px) {
-  /* For desktop */
-  .homepage-container {
-    grid-template-columns: auto 30em 30em auto;
-  }
-}
-
-.homepageButton1 {
-  grid-area: main1;
-}
-
-.homepageButton2 {
-  grid-area: main2;
-}
-
-.homepageButton3 {
-  grid-area: main3;
-}
-
-.homepageButton4 {
-  grid-area: main4;
+.homepageButtons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 60em;
+  margin: auto;
 }
 
 .homepageButton {
   max-width: 30em;
-  width: 100%;
-  margin: auto;
+  margin: 1em;
   display: flex;
   flex-direction: column;
   align-items: center;
   background: var(--buttonColor);
   border-radius: 25px;
+}
+
+@media screen and (max-width: 670px) {
+  .homepageButtons {
+    grid-template-columns: 1fr;
+  }
+
+  .homepageButton {
+    margin: 1em auto;
+  }
+}
+
+@media screen and (min-width: 1921px) {
+  .homepageButtons {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 120em;
+  }
 }
 
 .homepageButton img {
@@ -376,12 +354,11 @@ footer h3 {
 /* #endregion homepage*/
 
 /* #region PØLSERI */
-.polseri-container {
-  grid-template-areas:
-    "image image image"
-    "left main1 right"
-    "footer footer footer";
-  grid-template-columns: 1fr 1fr 1fr;
+.polseriMenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /* Hovedbilde for siden */
@@ -390,131 +367,75 @@ footer h3 {
     url(../Assets/Images/Placeholders/PolseriPlaceholder/pexels-markus-spiske-4682723.jpg);
 }
 
-/* Venstre boks med knapper/velgere */
-.menuList {
-  grid-area: left;
-  justify-self: right;
-  background: var(--buttonColor);
-  text-align: center;
-  margin: 0 0 0 2em;
-  padding: 2em 0 2em 0;
-  border-radius: 25px;
-  height: fit-content;
-  min-width: 15em;
-  max-width: 20em;
+.polseriOpeningHours {
+  max-width: 30em;
+  margin: 2em auto 0 auto;
 }
 
-.menuList h3 a {
-  margin: 0 0 0.5em 0;
-  color: var(--generalTextColor);
-  text-decoration: none;
+.polseriOpeningHours > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5em;
 }
 
-.menuList button {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+.polseriOpeningHours > div > div {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  border: none;
-  background: none;
-  color: var(--generalTextColor);
-  width: 100%;
-  font-size: 1.2em;
-  padding: 0.6em 0;
-  margin: 0.4em 0;
-  cursor: pointer;
 }
 
-.menuList button:hover {
-  background: var(--highlightColor);
-  border-radius: 90px;
-}
-
-.menuList button p {
-  grid-column-start: 2;
-  justify-self: center;
-}
-
-.menuListArrow {
-  display: none;
-  font-size: 2em;
-}
-
-.activeMenuButton {
-  background: var(--highlightColor) !important;
-  border-radius: 90px;
-}
-
-/* Selve boksen med de forskjellige menyene */
+/* Boksene med de forskjellige menyene */
 .menuOverview {
-  grid-area: main1;
   justify-self: center;
-  display: none;
   background: var(--buttonColor);
-  padding: 2em;
+  padding: 2em 5em;
   border-radius: 25px;
-  width: 100%;
-  min-width: 30em;
-  max-width: 60em;
+  width: 40em;
+  margin: 1em;
 }
 
 .menuOverview h2 {
   text-align: center;
 }
 
+/* Hver rett på menyene */
 .menuItem {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  gap: 1em;
   align-items: center;
-  margin: 2em 1em;
+  margin: 1em;
+  padding: 1em 2em;
 }
 
 .menuItem h4 {
-  margin: 0 0 0 1em;
+  white-space: nowrap;
 }
 
-/* Boksen med menyene - for mobil */
-.mobileMenuOverview {
-  display: none;
+.menuItem p {
+  margin-bottom: 1em;
 }
 
-/* Brukt for å gjemme/vise menyene - JavaScript */
-.showOverview {
-  display: block;
-}
-
-.showOverviewMobile {
-  display: none;
-}
-
-/* Skifter om på hva som vises på mobil */
-@media screen and (max-width: 850px) {
-  .menuList {
-    justify-self: center;
-    width: 100%;
-    max-width: 35em;
-    margin: 0;
-  }
-
-  .showOverview {
-    display: none;
-  }
-
-  #arrowDown {
-    display: inline;
-  }
-
-  .showOverviewMobile {
-    display: block;
-  }
-
-  .activeMenuButton #arrowDown {
-    display: none !important;
-  }
-
-  .activeMenuButton #arrowUp {
-    display: inline !important;
+@media screen and (max-width: 650px) {
+  /* Lager mer plass til tekst på mindre skjermer, men beholder samme layout */
+  .menuOverview {
+    padding: 2em 1em;
+    margin: 1em 1em;
   }
 }
 
+@media screen and (max-width: 450px) {
+  /* Skifter meny-layouten til å passe på mindre skermer */
+  .menuItem {
+    flex-direction: column;
+    align-items: flex-start;
+    border-top: 1px solid var(--generalTextColor);
+  }
+
+  .menuItem:last-of-type {
+    border-bottom: 1px solid var(--generalTextColor);
+  }
+}
 /* #endregion pølseri */
