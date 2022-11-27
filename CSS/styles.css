@@ -15,8 +15,8 @@
 
   --mainImgGradiant: linear-gradient(
     var(--backgroundColor),
-    #00000000 45%,
-    #00000000 55%,
+    #00000080 45%,
+    #00000080 55%,
     var(--backgroundColor) 90%
   );
 }
@@ -123,7 +123,6 @@ header {
 
 /* #region TITLE & IMAGE LAYOUT */
 .mainImg {
-  grid-area: image;
   margin-top: 2em;
   width: 100%;
   min-height: calc(100vh - var(--headerHight));
@@ -197,7 +196,6 @@ header {
 
 /* #region FOOTER LAYOUT */
 footer {
-  grid-area: footer;
   display: flex;
   justify-content: space-evenly;
   align-items: top;
@@ -216,10 +214,11 @@ footer {
   flex-direction: column;
 }
 
-.openingHoursList {
+.openingHours > div {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 1em;
+  text-align: center;
 }
 
 .socialLinks {
@@ -284,12 +283,7 @@ footer h3 {
 
 /* #region HOMEPAGE*/
 .homepageImg {
-  background-image: linear-gradient(
-      var(--backgroundColor),
-      #00000000 45%,
-      #00000000 55%,
-      var(--backgroundColor) 90%
-    ),
+  background-image: var(--mainImgGradiant),
     url(../Assets/Images/Placeholders/placeholderImage1.jpeg);
 }
 
@@ -353,6 +347,31 @@ footer h3 {
 
 /* #endregion homepage*/
 
+/* #region BOOKING */
+
+  /* Hovedbilde for siden */
+.bookingImg {
+  background-image: var(--mainImgGradiant),
+    url(../Assets/Images/Placeholders/BookingPlaceholder/pexels-bich-tran-760710.jpg);
+}
+
+.bookingInformation ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 1em;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+.bookingInformation li {
+  background: #22222250;
+  padding: 0.4em;
+  border: 1px solid #ffffffc4;
+  border-radius: 25px;
+}
+/* #endregion booking */
+
 /* #region PØLSERI */
 .polseriMenu {
   display: flex;
@@ -368,7 +387,7 @@ footer h3 {
 }
 
 .polseriOpeningHours {
-  max-width: 30em;
+  max-width: 24em;
   margin: 2em auto 0 auto;
 }
 
@@ -440,10 +459,11 @@ footer h3 {
 }
 /* #endregion pølseri */
 
-/*topical*/
+/* #region TOPICAL */
 .topicalInnhold {
+  background: white;
+  color: black;
   padding: 20px;
-  grid-area: main;
   padding-top: 100px;
 }
 #topical1 {
@@ -462,3 +482,5 @@ footer h3 {
   height: 250px;
   padding: 20px;
 }
+
+/* #endregion pølseri */
