@@ -37,35 +37,91 @@
       </nav>
     </header>
     <div class="mainImg bookingImg">
-      <div class="pageInformation bookingInformation">
+      <div class="pageInformation">
         <h1>Booking</h1>
         <p>
           I våre <b>prisvinnende</b> lokaler har vi arrangert eventer siden 1981 for alle slags folk, inkludert kjendiser som <i>Michael Skomaker</i>, <i>Maks Ferstappen</i> og <i>Luis Hæmmiltn</i>.
         </p>
-        <br>
-        <p> Vi tilbyr booking for alle slags eventer: </p>
-        <ul>
-          <li><p>Konfirmasjoner</p></li>
-          <li><p>Bryllup</p></li>
-          <li><p>Julebord</p></li>
-          <li><p>Og mye mer</p></li>
-        </ul>
+        <br> <br>
+        <p>Vi har utsikt rett ut mot den vakre <i>oslo-fjorden</i>, hvor man kan få kjempefine solnedganger på kveldene. <i>Perfekt</i> for arrangementet <b>ditt!</b></p>
       </div>
       <div class="arrowDown">
-        <a href="#breakfastMenu"><i class="fa-solid fa-angles-down"></i></a>
+        <a href="#main"><i class="fa-solid fa-angles-down"></i></a>
       </div>
       <p class="imageCredits">
         Bilde av Ole Bole, hentet fra
         <a href="https://pexels.com" target="_blank">Pexels.com</a>
       </p>
     </div>
-    
+    <main id="main">
+      <div class="bookingBox locationInfo">
+        <div>
+          <div>
+            <h2>Info om vårt lokale:</h2>
+            <ul>
+              <li>250m&sup2; stort</li>
+              <li>Holder opp til 300 personer</li>
+              <li>Ligger idyllisk til på Aker Brygge <a href="https://goo.gl/maps/eX2SqfYQHjjiLABJA" target="_blank">(Stranden 5, 0254 Oslo)</a></li>
+              <li>Tilbyr catering på alle bookinger</li>
+            </ul>
+          </div>
+          <div>
+            <p> <b>Peber</b> er et lokale som kan bli leid ut til diverse arrangementer, og vi har <b>lang</b> erfaring med blandt annet:</p>
+            <ul>
+              <li>Konfirmasjoner</li>
+              <li>Bryllup</li>
+              <li>Julebord</li>
+              <li>Og mye mer</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <img src="../Assets/Images/Placeholders/BookingPlaceholder/pexels-quark-studio-3201922.jpg"
+            alt="Bilde av hvordan våre lokaler ser ut. Lyse områder med mye grønne planter. Store vinduer med utsikt ut mot fjorden.">
+          <p class="imageCredits">
+            Bilde av Ole Bole, hentet fra
+            <a href="https://pexels.com" target="_blank">Pexels.com</a>
+          </p>
+        </div>
+      </div>
+      <div class="bookingBox">
+        <div>
+          <h2>Book våre lokaler</h2>
+          <p>Booking av våre lokaler er veldig enkelt. </p>
+          <p>Du kan enten fylle ut skjemaet på denne siden, så tar vi kontakt med
+            deg, eller så kan du ringe oss på <a href="tel:+4741232146">+47 412 321 46</a>
+          </p>
+        </div>
+        <div>
+          <!-- Vi har ikke lagt til denne funksjonen, men det er tenkt at skjemaet skal sendes til en php, hvor informasjonen som ble fyllt inn i skjemaet blir sent til Peber sin epost -->
+          <form action="#" target="_blank" method="post" class="bookingForm">
+            <div>
+              <label for="name">Fullt navn:</label> <br>
+              <input type="text" id="name" name="name" placeholder="Ola Normann" required>
+            </div>
+            <div>
+              <label for="email">Epost:</label> <br>
+              <input type="email" id="email" name="email" placeholder="ola.normann@eksempel.no" required>
+            </div>
+            <div>
+              <label for="date">Hvilken dag booker du for?</label> <br>
+              <input type="date" name="date" id="date" required>
+            </div>
+            <div id="bookingDescription">
+              <label for="description">Forklar litt om arrangementet du skal ha:</label> <br>
+              <textarea name="description" id="description"></textarea>
+            </div>
+            <input type="submit" value="Send Inn" id="submit">
+          </form>
+        </div>
+      </div>
+    </main>
     <footer>
       <div class="contactInfo">
         <h3>Kontakt Oss</h3>
         <address>
           <p>
-            <a href="https://goo.gl/maps/wbGdZc6X6FAp3fUh6" target="_blank">Karl Johans gate 16</a><br />0154 Oslo
+            <a href="https://goo.gl/maps/wbGdZc6X6FAp3fUh6" target="_blank">Stranden 5</a><br />0250 Oslo
           </p>
         </address>
         <br />
