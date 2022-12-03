@@ -19,7 +19,7 @@
   );
 
   /* Høyde på headeren (For at ting ikke skal bli gjemnt bak)*/
-  --headerHight: 6em;
+  --headerHight: 100px;
 }
 
 /* Generelt sideoppsett */
@@ -56,6 +56,8 @@ header {
 
   padding: 1.2em 2vw 1.2em 1em;
   background-color: var(--backgroundColor);
+
+  z-index: 999;
 }
 
 /* Skiller logoen og nav-knappene fra hverandre */
@@ -538,27 +540,145 @@ footer h3 {
 /* #endregion pølseri */
 
 /* #region TOPICAL */
-.topicalInnhold {
+.topicalPage {
+  /* Setter egne farger for denne siden */
   background: white;
   color: black;
-  padding: 20px;
-  padding-top: 100px;
-}
-#topical1 {
-  float: right;
-  shape-outside: margin-box;
-  padding: 10px;
-  width: 500px;
-  height: 250px;
 }
 
-#topical2 {
-  float: right;
-  border-radius: 50%;
-  shape-outside: circle();
-  width: 250px;
-  height: 250px;
-  padding: 20px;
+/* Styling av hovedtittlen for siden */
+.topicalPage h1 {
+  text-align: center;
+  padding: 1em;
+  font-size: 4em;
+}
+
+/* Oppsett for alle modulene */
+.topicContainer {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 1em 2em;
+  padding: 0 2em;
+  margin: 0 auto 5em auto;
+  max-width: 1400px;
+}
+
+/* Oppsett av alle sticky-objekter på siden */
+.topicSticky {
+  position: sticky;
+  top: var(--headerHight);
+  z-index: 0;
+}
+
+/* Styling av modul tittelen */
+.topicTitle h2 {
+  text-align: right;
+  font-size: 2em;
+}
+
+/* Oppsett av bildet til alle modulene */
+.topicImage {
+  width: 20em;
+}
+
+.topicImage img {
+  width: 100%;
+}
+
+/* Fjerner farge på bilde-referanse-linken */
+.topicImage a {
+  color: black;
+}
+
+/* Oppsett og styling av begreplisten og referanselisten */
+.definitions, .references {
+  width: 80%;
+  max-width: 90em;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+/* Får linjene etter den første linjen ti å være indentet (apa-kilde stil) */
+.references {
+  text-indent: -2em;
+  padding-left: 4em;
+}
+
+/* Bryter opp de lange ordene i lenkene, nødvendig for mobil og mindre skjermer */
+.references a {
+  word-wrap: break-word;
+}
+
+/* Fjerner mellomrom med svart bakgrunn mellom hovedinnhold og footeren */
+#topicalFooter {
+  margin: 0 !important;
+}
+
+/* Tilpasser layouten til mellomstore skjermer, dvs. ipad og lignende */
+@media screen and (max-width: 900px) and (min-width: 620px) {
+  .topicContainer {
+    grid-template-columns: auto auto;
+    padding: 0 1em;
+  }
+
+  .topicTitle {
+    grid-column: span 2;
+  }
+
+  .topicTitle h2 {
+    text-align: left;
+  }
+
+  .definitions, .references {
+    width: 100%;
+    margin: 0;
+    padding: 2em 1em;
+  }
+
+  .references {
+    padding-left: 3em;
+  }
+}
+
+/* Tilpasser layouten til små skjermer, mobiler */
+@media screen and (max-width: 620px) {
+  .topicContainer {
+    grid-template-columns: auto;
+    padding: 0 1em;
+  }
+
+  .topicTitle h2 {
+    text-align: left;
+    font-size: 1.6em;
+  }
+
+  .topicImage {
+    min-width: none;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .topicalPage h1 {
+    font-size: 2.5em;
+  }
+
+  .definitions, .references {
+    width: 100%;
+    margin: 0;
+    padding: 2em 1em;
+  }
+
+  .references {
+    padding: 3em;
+  }
+}
+
+/* Skifter fonten til en serif-type font for større skjermer */
+@media screen and (min-width: 620px) {
+  .topicalPage {
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.5;
+  }
 }
 
 /* #endregion pølseri */
