@@ -2,8 +2,7 @@
 
 /* #region MASTER STYLES  */
 :root {
-  /* Variables containing our website colors. 
-  Avoid putting colors directly in the code, put them here */
+  /* Variabler med alle fargene vi bruker på nettsiden*/
   --backgroundColor: #111;
   --generalTextColor: white;
   --mainColor: #aa5454;
@@ -11,16 +10,19 @@
   --buttonColor: #232323;
   --highlightColor: #505050;
 
-  --headerHight: 6em;
-
+  /* Gradient på hovedbildene på alle sidene */
   --mainImgGradiant: linear-gradient(
     var(--backgroundColor),
     #00000080 45%,
     #00000080 55%,
     var(--backgroundColor) 90%
   );
+
+  /* Høyde på headeren (For at ting ikke skal bli gjemnt bak)*/
+  --headerHight: 6em;
 }
 
+/* Generelt sideoppsett */
 * {
   margin: 0;
   box-sizing: border-box;
@@ -38,47 +40,32 @@ body {
   margin-top: var(--headerHight);
 }
 
+/* Styling av kriditerings-teksten på alle bildene */
+.imageCredits a {
+  color: var(--generalTextColor);
+}
+
 /* #endregion Master Styles */
 
-/* #region HEADER LAYOUT */
+/* #region HEADER */
 header {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
+
+  padding: 1.2em 2vw 1.2em 1em;
+  background-color: var(--backgroundColor);
 }
 
+/* Skiller logoen og nav-knappene fra hverandre */
 .desktopHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.icon,
-.mobileNav {
-  display: none;
-}
-
-@media screen and (max-width: 850px) {
-  /* For mobile */
-  .topNav a {
-    display: none;
-  }
-
-  .showMenu,
-  .showMenu a,
-  .topNav .icon {
-    display: block;
-  }
-}
-/* #endregion Header Layout */
-
-/* #region HEADER STYLE */
-header {
-  padding: 1.2em 2vw 1.2em 1em;
-  background-color: var(--backgroundColor);
-}
-
+/* Styling av header-logoen */
 .desktopHeader h1 a {
   text-decoration: none;
   color: var(--mainColor);
@@ -87,6 +74,7 @@ header {
   letter-spacing: 0.3em;
 }
 
+/* Styling av nav-linkene */
 .topNav a,
 .showMenu a {
   text-decoration: none;
@@ -97,15 +85,43 @@ header {
   transition: color 0.3s;
 }
 
+/* Styling av mobil nav-linkene */
+.mobileNav a {
+  margin: 1em 0;
+}
+
+/* Styling av hover effekten på storskjerm linkene */
 .topNav a:hover {
   color: var(--mainColor);
 }
 
+/* Styling av style hover effekten på mobil linkene */
 .showMenu a:hover {
   border-bottom: solid 2px var(--mainColor);
   color: var(--mainColor);
 }
 
+/* Gjemmer nav-barem til mobil-siden */
+.icon,
+.mobileNav {
+  display: none;
+}
+
+@media screen and (max-width: 850px) {
+  /* For mobil - gjemmer nav-linkene til storskjerm-siden */
+  .topNav a {
+    display: none;
+  }
+
+  /* Viser nav-baren til mobil */
+  .showMenu,
+  .showMenu a,
+  .topNav .icon {
+    display: block;
+  }
+}
+
+/* Styling av indikatoren for den aktive siden */
 .topNav a.activePage {
   border-bottom: solid var(--mainColor) 2px;
 }
@@ -113,46 +129,31 @@ header {
 .showMenu a.activePage {
   color: var(--mainColor);
   text-decoration: underline;
+  margin-left: 1em;
 }
+/* #endregion Header */
 
-.mobileNav {
-  line-height: 200%;
-  padding: 30px 0 0 0;
-}
-/* #endregion Header Style */
-
-/* #region TITLE & IMAGE LAYOUT */
+/* #region TITLE & IMAGE */
 .mainImg {
-  margin-top: 2em;
   width: 100%;
   min-height: calc(100vh - var(--headerHight));
   height: fit-content;
   background-size: cover;
-  background-position: right;
+  background-position: center;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
+/* Plasserer teksten i midten av skjermen */
 .pageInformation {
   margin: auto;
   text-align: center;
 }
 
-.arrowDown {
-  text-align: center;
-}
-
-.mainImg > .imageCredits {
-  margin: 0 2em 4em 2em;
-}
-
-/* #endregion title & image layout */
-
-/* #region TITLE & IMAGE STYLING */
+/* Styling av hovedtittelen for siden */
 .pageInformation h1 {
-  max-width: 100vw;
   hyphens: auto;
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -161,12 +162,14 @@ header {
   text-shadow: 2px 1px 10px #000000ee;
 }
 
+/* Styling for undertittler på hovedbildet */
 .pageInformation h2 {
   font-size: 1.6em;
   margin: 0.4em;
   text-shadow: 2px 2px 3px #000000;
 }
 
+/* Styling av informasjonsteksten på hovedbildet */
 .pageInformation p {
   max-width: 60em;
   margin: 0 1em;
@@ -174,7 +177,9 @@ header {
   text-shadow: 2px 2px 3px #000000;
 }
 
+/* Styling av pilknappen på bildet */
 .arrowDown {
+  text-align: center;
   margin: 3em;
 }
 
@@ -189,48 +194,21 @@ header {
   color: var(--mainColor);
 }
 
-.imageCredits a {
-  color: var(--generalTextColor);
+/* Bilde-kredit spesifikt på hovedbilde */
+.mainImg > .imageCredits {
+  margin: 0 2em 1em 2em;
 }
-/* #endregion title & image styling */
 
-/* #region FOOTER LAYOUT */
+/* #endregion title & image */
+
+/* #region FOOTER */
+/* Oppsett og styling av hele footeren */
 footer {
   display: flex;
   justify-content: space-evenly;
   align-items: top;
   gap: 5em 2em;
-}
 
-@media screen and (max-width: 870px) {
-  footer {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-.footerNav nav {
-  display: flex;
-  flex-direction: column;
-}
-
-.openingHours > div {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  text-align: center;
-}
-
-.socialLinks {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 1em;
-}
-/* #endregion Footer Layout */
-
-/* #region FOOTER STYLE */
-footer {
   margin: 3em 0 0 0;
   padding: 3em 3em;
   background: var(--buttonColor);
@@ -240,6 +218,15 @@ footer h3 {
   margin: 0 0 0.2em 0;
 }
 
+@media screen and (max-width: 870px) {
+  /* Tilpasser footeren til mobil */
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Styling av kontakt infoen */
 .contactInfo a {
   color: var(--generalTextColor);
 }
@@ -248,7 +235,17 @@ footer h3 {
   color: var(--mainColor);
 }
 
+/* Oppsett og styling av åpningstidene */
+.openingHours>div {
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+/* Navigasjonslinkene blir lagt vertikalt og stylet */
 .footerNav a {
+  display: block;
+  margin: 0 0 0.2em 1em;
+
   color: var(--generalTextColor);
   text-decoration: none;
 }
@@ -258,14 +255,15 @@ footer h3 {
   text-decoration: underline;
 }
 
-.footerNav nav a {
-  margin: 0 0 0.2em 1em;
+/* Oppsett og styling av sosiale medier lenker */
+.socialLinks {
+  text-align: center;
 }
 
 .socialLinks a {
   color: var(--generalTextColor);
   font-size: 1.4em;
-  margin: 0.4em 0;
+  margin: 0.3em;
 }
 
 #facebook:hover {
@@ -279,46 +277,31 @@ footer h3 {
 #linkedin:hover {
   color: #0077b5;
 }
-/* #endregion footer style */
+/* #endregion Footer */
 
 /* #region HOMEPAGE*/
 .homepageImg {
+  /* Legger til bakgrunnsbildet på hovedtittelen */
   background-image: var(--mainImgGradiant),
     url(../Assets/Images/Placeholders/placeholderImage1.jpeg);
+    background-position: right;
 }
 
-.homepageButtons {
+/* Oppsett og styling av alle knappene */
+.homepageButtonContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   max-width: 60em;
   margin: auto;
 }
 
+/* Oppsett og styling av hver knapp */
 .homepageButton {
   max-width: 30em;
   margin: 1em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
   background: var(--buttonColor);
   border-radius: 25px;
-}
-
-@media screen and (max-width: 670px) {
-  .homepageButtons {
-    grid-template-columns: 1fr;
-  }
-
-  .homepageButton {
-    margin: 1em auto;
-  }
-}
-
-@media screen and (min-width: 1921px) {
-  .homepageButtons {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    max-width: 120em;
-  }
 }
 
 .homepageButton img {
@@ -327,8 +310,8 @@ footer h3 {
 }
 
 .homepageButton h2 {
-  font-size: 1.5em;
-  padding: 0.8em 0 0.4em 0;
+  font-size: 1.6em;
+  padding: 0.6em 0;
 }
 
 .homepageButton h2 a {
@@ -345,53 +328,74 @@ footer h3 {
   background: var(--highlightColor);
 }
 
+/* Tilpasning av knappene til mobil */
+@media screen and (max-width: 670px) {
+  .homepageButtonContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .homepageButton {
+    margin: 1em auto;
+  }
+}
+
+/* Tilpasning av knappene til wide-screen */
+@media screen and (min-width: 1921px) {
+  .homepageButtonContainer {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 120em;
+  }
+}
+
 /* #endregion homepage*/
 
 /* #region BOOKING */
-
-  /* Hovedbilde for siden */
 .bookingImg {
+  /* Legger til hovedbildet for denne siden */
   background-image: var(--mainImgGradiant),
     url(../Assets/Images/Placeholders/BookingPlaceholder/pexels-bich-tran-760710.jpg);
 }
 
-.bookingBox{
+/* Setter informasjon og bilde/skjema ved siden av hverandre */
+.bookingContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2em 0;
+  margin: 2em 0 5em 0;
 }
 
-.bookingBox > div:first-of-type {
-  align-self: flex-start;
-}
-
-.bookingBox > div {
+/* Oppsett av flex-objektene */
+.bookingContainer > div {
   width: 30em;
   margin: 1em 2em;
 }
 
-.bookingBox > div:last-of-type {
-  margin-bottom: 5em;
+/* Gjør at teksten blir plassert i toppen av containeren */
+.bookingContainer > div:first-of-type {
+  align-self: flex-start;
 }
 
-.bookingBox > div > div {
-  margin: 2em 0;
+/* Lager mellomrom mellom tekstdelene i flexs-objektene */
+.bookingContainer > div > div {
+  margin-bottom: 2em;
 }
 
-.bookingBox img {
+/* Oppsett av bildet */
+.bookingContainer img {
   width: 100%;
   border-radius: 25px;
 }
 
-.bookingBox a {
+/* Styling av linkene i containeren */
+.bookingContainer a {
   color: var(--generalTextColor);
 }
 
-.bookingBox a:hover {
+.bookingContainer a:hover {
   color: var(--mainColor);
 }
 
+/* Oppsett av skjemaet */
 .bookingForm {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -406,6 +410,7 @@ footer h3 {
   padding: 0.3em 0.8em;
 }
 
+/* Oppsett av forklarings-tekstboksen */
 #bookingDescription {
   grid-column-start: 1;
   grid-column-end: 3;
@@ -419,39 +424,34 @@ footer h3 {
   border-radius: 25px;
 }
 
+/* Tilpasning av sideoppsettet til mindre skjermer. Setter alt vertikalt */
 @media screen and (max-width: 870px) {
-  .bookingBox {
+  .bookingContainer {
     flex-direction: column;
   }
 
-  .bookingBox > div {
+  .bookingContainer > div {
     width: auto !important;
   }
 }
 
+/* Tilpasser skjemaet til mobil. Får alt til å ligge under hverandre */
 @media screen and (max-width: 520px) {
   .bookingForm {
-      grid-template-columns: 1fr !important;
+      grid-template-columns: 1fr;
     }
   
     #bookingDescription {
-      grid-column-start: auto !important;
-      grid-column-end: auto !important;
+      grid-column-start: auto;
+      grid-column-end: auto;
     }
 }
 
 /* #endregion booking */
 
 /* #region PØLSERI */
-.polseriMenu {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-/* Hovedbilde for siden */
 .polseriImg {
+  /* Legger til hovedbildet for denne siden */
   background-image: var(--mainImgGradiant),
     url(../Assets/Images/Placeholders/PolseriPlaceholder/pexels-markus-spiske-4682723.jpg);
 }
@@ -472,6 +472,14 @@ footer h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+/* Oppsett av meny kontaineren */
+.polseriMenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /* Boksene med de forskjellige menyene */
@@ -507,16 +515,16 @@ footer h3 {
   margin-bottom: 1em;
 }
 
+/* Lager mer plass til tekst på mindre skjermer, men beholder samme layout */
 @media screen and (max-width: 650px) {
-  /* Lager mer plass til tekst på mindre skjermer, men beholder samme layout */
   .menuOverview {
     padding: 2em 1em;
     margin: 1em 1em;
   }
 }
 
+/* Skifter meny-layouten til å passe på mindre skermer */
 @media screen and (max-width: 450px) {
-  /* Skifter meny-layouten til å passe på mindre skermer */
   .menuItem {
     flex-direction: column;
     align-items: flex-start;
