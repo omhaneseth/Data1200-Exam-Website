@@ -1,40 +1,32 @@
 <!DOCTYPE html>
 <html lang="no">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Peber - Lokaler til alle slags arrangementer</title>
-    <link rel="icon" href="../Assets/Images/Favicon/favicon2.ico" />
-    <link rel="stylesheet" href="../CSS/styles.css" />
-    <link
-      rel="stylesheet"
-      href="../Assets/Icons/fontawesome-free-6.2.0-web/css/fontawesome.css"
-    />
-    <link
-      rel="stylesheet"
-      href="../Assets/Icons/fontawesome-free-6.2.0-web/css/brands.css"
-    />
-    <link
-      rel="stylesheet"
-      href="../Assets/Icons/fontawesome-free-6.2.0-web/css/solid.css"
-    />
-    <script src="../JavaScripts/mobileHeaderButton.js"></script>
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Peber - Lokaler til alle slags arrangementer</title>
+  <link rel="icon" href="../Assets/Images/Favicon/favicon2.ico" />
+  <link rel="stylesheet" href="../CSS/styles.css" />
+  <link rel="stylesheet" href="../Assets/Icons/fontawesome-free-6.2.0-web/css/fontawesome.css" />
+  <link rel="stylesheet" href="../Assets/Icons/fontawesome-free-6.2.0-web/css/brands.css" />
+  <link rel="stylesheet" href="../Assets/Icons/fontawesome-free-6.2.0-web/css/solid.css" />
+  <script src="../JavaScripts/mobileHeaderButton.js"></script>
+</head>
+
+<body>
+  <div class="page-container">
     <header>
       <div class="desktopHeader">
         <h1><a href="../index.html">Peber</a></h1>
         <nav class="topNav">
           <a href="javascript:void(0);" class="icon" onclick="mobileMenuButton()"><i class="fa-solid fa-bars">
-              <p class="hide-text">Knapp som åpner navigasjonsmenyen</p>
+              <span class="hide-text">Knapp som åpner navigasjonsmenyen</span>
             </i></a>
           <a href="../index.html">Hjem</a>
           <a href="../Pages/booking.html">Booking</a>
           <a href="../Pages/polseri.html">Pølseri</a>
-          <a href="../Pages/Accessibility.html" class="activePage"
-            >Brukertilpasning</a
-          >
+          <a href="../Pages/Accessibility.html" class="activePage">Brukertilpasning</a>
           <a href="../Pages/Topical.html">Aktuelt</a>
         </nav>
       </div>
@@ -42,86 +34,175 @@
         <a href="../index.html">Hjem</a>
         <a href="../Pages/booking.html">Booking</a>
         <a href="../Pages/polseri.html">Pølseri</a>
-        <a href="../Pages/Accessibility.html" class="activePage"
-          >Brukertilpasning</a
-        >
+        <a href="../Pages/Accessibility.html" class="activePage">Brukertilpasning</a>
         <a href="../Pages/Topical.html">Aktuelt</a>
       </nav>
     </header>
-    <div class="grid-container homepage-container">
-      <div class="mainImg">
-        <div class="pageInformation">
-          <h1>Brukertilpasning</h1>
+    <div class="mainImg accessibilityImg">
+      <div class="pageInformation">
+        <h1>Brukertilpasning</h1>
+      </div>
+      <div class="arrowDown">
+        <a href="#main"><i class="fa-solid fa-angles-down"><span class="hide-text">Pil-knapp for å scrolle ned til
+              hovedinnholdet</span></i></a>
+      </div>
+      <p class="imageCredits">
+        Bilde av Ole Bole, hentet fra
+        <a href="https://pexels.com" target="_blank">Pexels.com</a>
+      </p>
+    </div>
+    <main id="main" class="accessibilityMain">
+      <div class="accessibilityContent">
+        <h2>WAVE-test</h2>
+        <p>
+          Vi brukte <a href="https://wave.webaim.org/" target="_blank">Wave-testen</a> for å sjekke om nettsiden vår
+          møtte
+          standardene. Dette er en test som vi har brukt fra første
+          oblig i faget, og vi har lært av feilene vi har oppdaget fra de. Derfor plukket ikke Wave-testen opp mange
+          feil
+          denne gangen.
+        </p>
+        <p>Her er noen punkter vi tenkte på fra starten av:</p>
+        <div>
+          <h3>Kontrastfeil</h3>
           <p>
-            Vi har et pølseri som kan tilby catering ved booking av våre
-            lokaler. Pølseriet holder også åpent for alle, 09:00 til 20:00 alle
-            hverdager. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Consequatur autem magni laborum vitae hic temporibus vel
-            exercitationem consectetur animi? Corrupti aliquid nulla voluptatum
-            distinctio culpa minus repellendus consectetur eveniet iusto
-            debitis, mollitia iure, error delectus, illum cumque eligendi
-            architecto voluptate. Ea fugiat, reprehenderit minus molestias illo
-            quos quasi cumque ab.
+            Dette unngikk vi ved å bare bruke hvit tekst på svart bakgrunn. Vi har litt tekst som ligger foran
+            hovedbildet på
+            hver
+            side. Dette er noe Wave-testen ikke reagerer på, men vi tenkte uansett mye på hvordan vi burde få den enkelt
+            leselig,
+            og
+            valgte å gå for en dropshadow, samtidig som vi legger på en gradient på bildet, som gjør det mørkere. Etter
+            dette
+            brukte
+            vi TPGi sitt verktøy “<a href="https://www.tpgi.com/color-contrast-checker/" target="_blank">Color Contrast
+              Checker</a>” for å teste
+            teksten mot de lyseste punktene på bildene. Den sa at vi møtte
+            kravene til kontrast.
+          </p>
+          <p>
+            Vi leste også en artikkel om at det kan være vanskelig å lese hvit tekst på helt svart bakgrunn, pga. for
+            mye
+            kontrast,
+            som kan være ubehagelig (anthony, 2018). Derfor gjorde vi hele bakgrunnen veldig mørk grå, istedet for helt
+            svart.
+            I
+            tillegg passet vi på å plassere mye av teksten i bokser som hadde en lysere gråtone, som gjorde kontrastene
+            lavere.
+          </p>
+          <h3>Hoppe over header-level</h3>
+          <p>
+            Det er noen steder, for eksempel i menyene på pølseri-siden, hvor det kan være vanskelig å vite hva som blir
+            riktig å
+            bruke. Wave testen reagerer ikke på måten vi har gjort det på nå, så da tenker vi at det er gjort på en grei
+            måte.
+          </p>
+          <h3>Manglende tekst i linker</h3>
+          <p>
+            Dette gjelder symbolene og sosiale medier-ikonene, hvor symbolene ikke telles som tekst. Dette er noe som er
+            ganske
+            lett
+            å glemme av, men heldigvis sier Wave testen ifra om dette.Vi løste dette ved å putte tekst inni/bak ikonene,
+            og
+            bruke
+            “text-indent” til å flytte teksten ut av skjermen. Da kunne screen-readeren lese hva ikonene betydde.
           </p>
         </div>
-        <div class="arrowDown">
-          <a href="#main"><i class="fa-solid fa-angles-down"><p class="hide-text">Pil-knapp for å scrolle ned til hovedinnholdet</p></i></a>
-        </div>
-        <figcaption class="imageCredits">
-          Bilde av Ole Bole, hentet fra
-          <a href="https://pexels.com" target="_blank">Pexels.com</a>
-        </figcaption>
+        <h2>Andre grep</h2>
+        <p>
+          Vi har også tatt andre grep for brukertilpasning, blant annet taggene: header, nav, footer, main, article,
+          figure og
+          figcaption for å gi data på hva de forskjellige elementene i siden vår er for noe. Dette gjør det mulig for
+          verktøy
+          å
+          navigere siden bedre.
+        </p>
+        <p>
+          Vi har prøvd å bruke mest mulig relative verdier for at man for eksempel kan bruke større font-størrelser uten
+          at
+          siden
+          blir ødelagt. Vi har fortsatt litt å jobbe på ift. veldig store fonter, men med det største font-valget i
+          chrome-innstillingene, er hele siden fortsatt brukbar. Alt ser bare ikke like fint ut.
+        </p>
+        <p>
+          Vi brukte også “<a
+            href="https://chrome.google.com/webstore/detail/accessibility-insights-fo/pbjjkligggfmakdaogkfomddhfmpjeni?hl"
+            target="_blank">Accessibility
+            Insights for Web</a>”, en browser extension fra Microsoft, som også er en automatisk test. Den
+          lot oss teste ut keyboard-focusability på siden, hvor vi testet ut index rekkefølgen, og at ingen knapper ble
+          hoppet
+          over. Alt så greit ut.
+        </p>
+        <figure>
+          <picture>
+            <img src="../Assets/Images/Accessibility/TestingForAccessibility.png"
+              alt="Bilde av indeks-rekkefølgen på nettsiden vår">
+          </picture>
+          <figcaption>Skjermbilde av keyboard-focusability på vår nettside</figcaption>
+        </figure>
+        <h2>Referanser</h2>
+        <p class="accessibilityReferance">
+          anthony. (2018, Mai 8). Why You Should Never Use Pure Black for Text or Backgrounds. UX Movement. Hentet 8.
+          november
+          2022,
+          fra <a href="https://uxmovement.com/content/why-you-should-never-use-pure-black-for-text-or-backgrounds/"
+            target="_blank">
+            https://uxmovement.com/content/why-you-should-never-use-pure-black-for-text-or-backgrounds/
+          </a>
+        </p>
       </div>
-      <footer>
-        <div class="contactInfo">
-          <h3>Kontakt Oss</h3>
-          <address>
-            <p>
-              <a href="https://goo.gl/maps/eX2SqfYQHjjiLABJA" target="_blank">Stranden 5</a><br />0250 Oslo
-            </p>
-          </address>
-          <br />
-          <p>Daglig Leder: <i>Per Berg</i></p>
-          <p>Epost: <a href="mailto:kontakt@peber.no"><i>kontakt@peber.no</i></a></p>
-          <p>Mobil: <a href="tel:+4741232146"><i>+47 412 321 46</i></a></p>
-        </div>
-        <div class="openingHours">
-          <h3>Pølseri Åpningstider</h3>
-          <div>
-            <p>Mandag - Fredag</p>
-            <p><time>09:00</time>-<time>20:00</time></p>
-          </div>
-          <div>
-            <p>Lørdag - Søndag</p>
-            <p><time>10:00</time>-<time>18:00</time></p>
-          </div>
-        </div>
-        <div class="footerNav">
-          <h3>Navigasjon</h3>
-          <nav>
-            <a href="../index.html">Hjem</a>
-            <a href="../Pages/booking.html">Booking</a>
-            <a href="../Pages/polseri.html">Pølseri</a>
-            <a href="../Pages/Accessibility.html">Brukertilpasning</a>
-            <a href="../Pages/Topical.html">Aktuelt</a>
-          </nav>
+    </main>
+    <footer>
+      <div class="contactInfo">
+        <h3>Kontakt Oss</h3>
+        <address>
+          <p>
+            <a href="https://goo.gl/maps/eX2SqfYQHjjiLABJA" target="_blank">Stranden 5</a><br />0250 Oslo
+          </p>
+        </address>
+        <br />
+        <p>Daglig Leder: <i>Per Berg</i></p>
+        <p>Epost: <a href="mailto:kontakt@peber.no"><i>kontakt@peber.no</i></a></p>
+        <p>Mobil: <a href="tel:+4741232146"><i>+47 412 321 46</i></a></p>
+      </div>
+      <div class="openingHours">
+        <h3>Pølseri Åpningstider</h3>
+        <div>
+          <p>Mandag - Fredag</p>
+          <p><time>09:00</time>-<time>20:00</time></p>
         </div>
         <div>
-          <h3>Sosiale Medier</h3>
-          <div class="socialLinks">
-            <!-- Disse logoene er hentet fra fontawesome.com, se import-link i head -->
-            <a href="https://facebook.com/" target="_blank" id="facebook"><i class="fa-brands fa-square-facebook">
-                <p class="hide-text">Link til vår facebook side</p>
-              </i></a>
-            <a href="https://instagram.com/" target="_blank" id="instagram"><i class="fa-brands fa-instagram">
-                <p class="hide-text">Link til vår instagram profil</p>
-              </i></a>
-            <a href="https://linkedin.com/" target="_blank" id="linkedin"><i class="fa-brands fa-linkedin">
-                <p class="hide-text">Link til vår linkedin profil</p>
-              </i></a>
-          </div>
+          <p>Lørdag - Søndag</p>
+          <p><time>10:00</time>-<time>18:00</time></p>
         </div>
-      </footer>
-    </div>
-  </body>
+      </div>
+      <div class="footerNav">
+        <h3>Navigasjon</h3>
+        <nav>
+          <a href="../index.html">Hjem</a>
+          <a href="../Pages/booking.html">Booking</a>
+          <a href="../Pages/polseri.html">Pølseri</a>
+          <a href="../Pages/Accessibility.html">Brukertilpasning</a>
+          <a href="../Pages/Topical.html">Aktuelt</a>
+        </nav>
+      </div>
+      <div>
+        <h3>Sosiale Medier</h3>
+        <div class="socialLinks">
+          <!-- Disse logoene er hentet fra fontawesome.com, se import-link i head -->
+          <a href="https://facebook.com/" target="_blank" id="facebook"><i class="fa-brands fa-square-facebook">
+              <span class="hide-text">Link til vår facebook side</span>
+            </i></a>
+          <a href="https://instagram.com/" target="_blank" id="instagram"><i class="fa-brands fa-instagram">
+              <span class="hide-text">Link til vår instagram profil</span>
+            </i></a>
+          <a href="https://linkedin.com/" target="_blank" id="linkedin"><i class="fa-brands fa-linkedin">
+              <span class="hide-text">Link til vår linkedin profil</span>
+            </i></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
 </html>

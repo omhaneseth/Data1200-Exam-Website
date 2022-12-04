@@ -47,6 +47,7 @@ body {
 
 /* Fjerner teksten som er lagt til for screen readere */
 .hide-text {
+  display: inline-block;
   text-indent: -9999px;
 }
 /* #endregion Master Styles */
@@ -160,7 +161,9 @@ header {
 
 /* Styling av hovedtittelen for siden */
 .pageInformation h1 {
+  -webkit-hyphens: auto;
   hyphens: auto;
+
   text-transform: uppercase;
   letter-spacing: 0.2em;
   margin: 1em 0;
@@ -212,7 +215,6 @@ header {
 footer {
   display: flex;
   justify-content: space-evenly;
-  align-items: top;
   gap: 5em 2em;
 
   margin: 3em 0 0 0;
@@ -290,7 +292,8 @@ footer h3 {
   /* Legger til bakgrunnsbildet på hovedtittelen */
   background-image: var(--mainImgGradiant),
     url(../Assets/Images/Placeholders/placeholderImage1.jpeg);
-    background-position: right;
+
+  background-position: right;
 }
 
 /* Oppsett og styling av alle knappene */
@@ -545,6 +548,106 @@ footer h3 {
 }
 /* #endregion pølseri */
 
+/* #region ACCESSIBILITY */
+.accessibilityImg {
+  /* Legger til hovedbildet for denne siden */
+  background-image: var(--mainImgGradiant),
+    url(../Assets/Images/Placeholders/UsertestingPlaceholder/pexels-yan-krukov-7695431.jpg);
+}
+
+/* Setter størrelse og sentrerer tekstboksen */
+.accessibilityMain {
+  margin: 8em auto;
+  max-width: 65em;
+}
+
+/* Styling av tekstboksen */
+.accessibilityContent {
+  margin: 0 2em;
+  padding: 4em;
+  background: var(--buttonColor);
+  border-radius: 25px;
+}
+
+/* Lager en indent til undertemaene */
+.accessibilityContent > div {
+  padding: 0 0 4em 4em;
+}
+
+/* Lager mellomrom mellom tittel og tekst */
+.accessibilityContent h2 {
+  padding: 0 0 0.8em 0;
+}
+
+/* Lager mellomromm mellom den siste tittelen og teksten over */
+.accessibilityContent h2:last-of-type {
+  padding-top: 2em;
+}
+
+/* Styling av titlene til underteamene */
+.accessibilityContent h3 {
+  padding: 1em 0 0.5em 0;
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+/* Gir brødteksten større indent enn titlene og lager mellomrom mellom avsnittene */
+.accessibilityContent p {
+  padding-left: 1em;
+  padding-bottom: 1em;
+}
+
+/* Styling av linkene i teksten */
+.accessibilityContent a {
+  color: var(--mainColor);
+  word-wrap: break-word;
+}
+
+.accessibilityContent a:hover {
+  color: var(--secondaryColor);
+}
+
+/* Får linjene etter den første linjen til å være indentet (apa-kilde stil) */
+.accessibilityReferance {
+  text-indent: -2em;
+  padding-left: 3em !important;
+}
+
+/* Styling av bilder i teksten */
+.accessibilityContent img {
+  width: 100%;
+  border-radius: 25px;
+}
+
+/* Tilpasser teksten til mellomstore skjermer */
+@media screen and (max-width: 850px) {
+  .accessibilityContent {
+    padding: 3em 2em;
+  }
+
+  .accessibilityContent > div {
+    padding-left: 2em;
+  }
+}
+
+/* Tilpasser teksten til mobil-skjermer */
+@media screen and (max-width: 600px) {
+  .accessibilityContent {
+    margin: 0 1em;
+    padding: 3em 1em;
+  }
+
+  .accessibilityContent > div {
+    padding-left: 0;
+  }
+
+  .accessibilityContent h3 {
+    padding-left: 0.5em;
+    padding-bottom: 0.2em;
+  }
+}
+/* #endregion accessibility */
+
 /* #region TOPICAL */
 .topicalPage {
   /* Setter egne farger for denne siden */
@@ -561,6 +664,10 @@ footer h3 {
 
 .data1100Credits {
   padding: 0 2em;
+}
+
+.topicalPage hr {
+  margin: 1em 2em;
 }
 
 /* Oppsett for alle modulene */
@@ -608,7 +715,13 @@ footer h3 {
   padding: 2em;
 }
 
-/* Får linjene etter den første linjen ti å være indentet (apa-kilde stil) */
+/* Lager mellomrom mellom definisjonene */
+.definitions dd {
+  margin-bottom: 1em;
+  margin-left: 2em;
+}
+
+/* Får linjene etter den første linjen til å være indentet (apa-kilde stil) */
 .references {
   text-indent: -2em;
   padding-left: 4em;
@@ -629,6 +742,10 @@ footer h3 {
   .topicContainer {
     grid-template-columns: auto auto;
     padding: 0 1em;
+  }
+
+  .topicalPage hr {
+    margin: 1em;
   }
 
   .topicTitle {
@@ -657,13 +774,17 @@ footer h3 {
     padding: 0 1em;
   }
 
+  .topicalPage hr {
+    margin: 1em;
+  }
+
   .topicTitle h2 {
     text-align: left;
     font-size: 1.6em;
   }
 
   .topicImage {
-    min-width: none;
+    min-width: auto;
     width: 100%;
     margin: 0 auto;
   }

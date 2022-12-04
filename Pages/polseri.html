@@ -1,240 +1,235 @@
 <!DOCTYPE html>
 <html lang="no">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Peber - Lokaler til alle slags arrangementer</title>
-    <link rel="icon" href="../Assets/Images/Favicon/favicon2.ico" />
-    <link rel="stylesheet" href="../CSS/styles.css" />
-    <link
-      rel="stylesheet"
-      href="../Assets/Icons/fontawesome-free-6.2.0-web/css/fontawesome.css"
-    />
-    <link
-      rel="stylesheet"
-      href="../Assets/Icons/fontawesome-free-6.2.0-web/css/brands.css"
-    />
-    <link
-      rel="stylesheet"
-      href="../Assets/Icons/fontawesome-free-6.2.0-web/css/solid.css"
-    />
-    <script src="../JavaScripts/mobileHeaderButton.js"></script>
-  </head>
-  <body>
-    <div class="page-container">
-      <header>
-        <div class="desktopHeader">
-          <h1><a href="../index.html">Peber</a></h1>
-          <nav class="topNav">
-            <a href="javascript:void(0);" class="icon" onclick="mobileMenuButton()"><i class="fa-solid fa-bars">
-                <p class="hide-text">Knapp som åpner navigasjonsmenyen</p>
-              </i></a>
-            <a href="../index.html">Hjem</a>
-            <a href="../Pages/booking.html">Booking</a>
-            <a href="../Pages/polseri.html" class="activePage">Pølseri</a>
-            <a href="../Pages/Accessibility.html">Brukertilpasning</a>
-            <a href="../Pages/Topical.html">Aktuelt</a>
-          </nav>
-        </div>
-        <nav class="mobileNav" id="theMobileNav">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Peber - Lokaler til alle slags arrangementer</title>
+  <link rel="icon" href="../Assets/Images/Favicon/favicon2.ico" />
+  <link rel="stylesheet" href="../CSS/styles.css" />
+  <link rel="stylesheet" href="../Assets/Icons/fontawesome-free-6.2.0-web/css/fontawesome.css" />
+  <link rel="stylesheet" href="../Assets/Icons/fontawesome-free-6.2.0-web/css/brands.css" />
+  <link rel="stylesheet" href="../Assets/Icons/fontawesome-free-6.2.0-web/css/solid.css" />
+  <script src="../JavaScripts/mobileHeaderButton.js"></script>
+</head>
+
+<body>
+  <div class="page-container">
+    <header>
+      <div class="desktopHeader">
+        <h1><a href="../index.html">Peber</a></h1>
+        <nav class="topNav">
+          <a href="javascript:void(0);" class="icon" onclick="mobileMenuButton()"><i class="fa-solid fa-bars">
+              <span class="hide-text">Knapp som åpner navigasjonsmenyen</span>
+            </i></a>
           <a href="../index.html">Hjem</a>
           <a href="../Pages/booking.html">Booking</a>
           <a href="../Pages/polseri.html" class="activePage">Pølseri</a>
           <a href="../Pages/Accessibility.html">Brukertilpasning</a>
           <a href="../Pages/Topical.html">Aktuelt</a>
         </nav>
-      </header>
-      <div class="mainImg polseriImg">
-        <div class="pageInformation">
-          <h1>Peber's Pølseri</h1>
-          <p>
-            Vi har et pølseri som er åpent for alle, med eller uten booking av
-            våre lokaler. Vi har en frokostmeny som er tilgjengeilig alle dager
-            frem til 12:00, og en middagsmeny som er tilgjengelig fra 12:00 og
-            utover. Vår snacks meny og drikke meny er alltid tilgjengelig i våre
-            åpningstider.
-          </p>
-          <div class="polseriOpeningHours">
-            <h2>Pølseriets åpningstider</h2>
-            <div>
-              <div>
-                <p>Mandag - Fredag</p>
-                <p><time>09:00</time> til <time>20:00</time></p>
-              </div>
-              <div>
-                <p>Lørdag - Søndag</p>
-                <p><time>10:00</time> til <time>18:00</time></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="arrowDown">
-          <a href="#breakfastMenu"><i class="fa-solid fa-angles-down"><p class="hide-text">Pil-knapp for å scrolle ned til hovedinnholdet</p></i></a>
-        </div>
-        <figcaption class="imageCredits">
-          Bilde av Ole Bole, hentet fra
-          <a href="https://pexels.com" target="_blank">Pexels.com</a>
-        </figcaption>
       </div>
-      <main class="polseriMenu">
-        <div id="breakfastMenu" class="menuOverview">
-          <h2>Frokostmeny</h2>
-          <div class="menuItem">
-            <div>
-              <h3>Korv i potatis</h3>
-              <p>Pølse og potetstappe</p>
-              <p><i>Allergener: Gluten, laktose, nøtter</i></p>
-            </div>
-            <h4>90 kr</h4>
-          </div>
-          <div class="menuItem">
-            <div>
-              <h3>Gratinerte pølser</h3>
-              <p>Ostegrill i brød</p>
-              <p><i>Allergener: Gluten, laktose</i></p>
-            </div>
-            <h4>200 kr</h4>
-          </div>
-          <div class="menuItem">
-            <div>
-              <h3>Bratwurst med fries</h3>
-              <p>Tysk bratwurst med pommes frites</p>
-              <p><i>Allergener: Gluten</i></p>
-            </div>
-            <h4>190 kr</h4>
-          </div>
-        </div>
-        <div id="dinnerMenu" class="menuOverview">
-          <h2>Middagsmeny</h2>
-          <div class="menuItem">
-            <div>
-              <h3>Pølsegrateng</h3>
-              <p>Klassisk pølsegrateng med pasta</p>
-              <p><i>Allergener: Gluten</i></p>
-            </div>
-            <h4>280 kr</h4>
-          </div>
-          <div class="menuItem">
-            <div>
-              <h3>Chorizo</h3>
-              <p>Spansk pølse med surkål</p>
-              <p><i>Allergener: Gluten, nøtter</i></p>
-            </div>
-            <h4>260 kr</h4>
-          </div>
-          <div class="menuItem">
-            <div>
-              <h3>Pølsetallerken</h3>
-              <p>Winerpølser i potetmos med remulade og sopp</p>
-              <p><i>Allergener: Gluten</i></p>
-            </div>
-            <h4>220 kr</h4>
-          </div>
-        </div>
-        <div id="snacksMenu" class="menuOverview">
-          <h2>Snacksmeny</h2>
-          <div class="menuItem">
-            <div>
-              <h3>Snackspølse med potet</h3>
-              <p>Lokal småpølse med potetsalat</p>
-              <p><i>Allergener: Gluten, laktose</i></p>
-            </div>
-            <h4>120 kr</h4>
-          </div>
-          <div class="menuItem">
-            <div>
-              <h3>Pølse i brød/lompe</h3>
-              <p>Du kan velge mellom brød eller lompe</p>
-              <p><i>Allergener: Gluten</i></p>
-            </div>
-            <h4>50 kr</h4>
-          </div>
-          <div class="menuItem">
-            <div>
-              <h3>Pommes frites</h3>
-              <p>Strimlede poteter som er frityrstekt</p>
-              <p><i>Allergener: Gluten</i></p>
-            </div>
-            <h4>40 kr</h4>
-          </div>
-        </div>
-        <div id="drinkMenu" class="menuOverview">
-          <h2>Drikke</h2>
-          <div class="menuItem">
-            <div>
-              <h3>Mineralvann 0,5</h3>
-              <p><i>Cola, Fanta, Sprite</i></p>
-            </div>
-            <h4>70 kr</h4>
-          </div>
-          <div class="menuItem">
-            <div>
-              <h3>Kaffe</h3>
-              <p>Espresso, Frappuccino, Iskaffe</p>
-              <p><i>Allergener: Laktose, hvete, bygg</i></p>
-            </div>
-            <h4>50 kr</h4>
-          </div>
-          <div class="menuItem">
-            <div>
-              <h3>Øl 0,5</h3>
-              <p><i>Allergener: Bygg</i></p>
-            </div>
-            <h4>100 kr</h4>
-          </div>
-        </div>
-      </main>
-      <footer>
-        <div class="contactInfo">
-          <h3>Kontakt Oss</h3>
-          <address>
-            <p>
-              <a href="https://goo.gl/maps/eX2SqfYQHjjiLABJA" target="_blank">Stranden 5</a><br />0250 Oslo
-            </p>
-          </address>
-          <br />
-          <p>Daglig Leder: <i>Per Berg</i></p>
-          <p>Epost: <a href="mailto:kontakt@peber.no"><i>kontakt@peber.no</i></a></p>
-          <p>Mobil: <a href="tel:+4741232146"><i>+47 412 321 46</i></a></p>
-        </div>
-        <div class="openingHours">
-          <h3>Pølseri Åpningstider</h3>
+      <nav class="mobileNav" id="theMobileNav">
+        <a href="../index.html">Hjem</a>
+        <a href="../Pages/booking.html">Booking</a>
+        <a href="../Pages/polseri.html" class="activePage">Pølseri</a>
+        <a href="../Pages/Accessibility.html">Brukertilpasning</a>
+        <a href="../Pages/Topical.html">Aktuelt</a>
+      </nav>
+    </header>
+    <div class="mainImg polseriImg">
+      <div class="pageInformation">
+        <h1>Peber's Pølseri</h1>
+        <p>
+          Vi har et pølseri som er åpent for alle, med eller uten booking av
+          våre lokaler. Vi har en frokostmeny som er tilgjengeilig alle dager
+          frem til 12:00, og en middagsmeny som er tilgjengelig fra 12:00 og
+          utover. Vår snacks meny og drikke meny er alltid tilgjengelig i våre
+          åpningstider.
+        </p>
+        <div class="polseriOpeningHours">
+          <h2>Pølseriets åpningstider</h2>
           <div>
-            <p>Mandag - Fredag</p>
-            <p><time>09:00</time>-<time>20:00</time></p>
-          </div>
-          <div>
-            <p>Lørdag - Søndag</p>
-            <p><time>10:00</time>-<time>18:00</time></p>
+            <div>
+              <p>Mandag - Fredag</p>
+              <p><time>09:00</time> til <time>20:00</time></p>
+            </div>
+            <div>
+              <p>Lørdag - Søndag</p>
+              <p><time>10:00</time> til <time>18:00</time></p>
+            </div>
           </div>
         </div>
-        <div class="footerNav">
-          <h3>Navigasjon</h3>
-          <nav>
-            <a href="../index.html">Hjem</a>
-            <a href="../Pages/booking.html">Booking</a>
-            <a href="../Pages/polseri.html">Pølseri</a>
-            <a href="../Pages/Accessibility.html">Brukertilpasning</a>
-            <a href="../Pages/Topical.html">Aktuelt</a>
-          </nav>
+      </div>
+      <div class="arrowDown">
+        <a href="#breakfastMenu"><i class="fa-solid fa-angles-down"><span class="hide-text">Pil-knapp for å scrolle ned
+              til hovedinnholdet</span></i></a>
+      </div>
+      <p class="imageCredits">
+        Bilde av Ole Bole, hentet fra
+        <a href="https://pexels.com" target="_blank">Pexels.com</a>
+      </p>
+    </div>
+    <main class="polseriMenu">
+      <div id="breakfastMenu" class="menuOverview">
+        <h2>Frokostmeny</h2>
+        <div class="menuItem">
+          <div>
+            <h3>Korv i potatis</h3>
+            <p>Pølse og potetstappe</p>
+            <p><i>Allergener: Gluten, laktose, nøtter</i></p>
+          </div>
+          <h4>90 kr</h4>
+        </div>
+        <div class="menuItem">
+          <div>
+            <h3>Gratinerte pølser</h3>
+            <p>Ostegrill i brød</p>
+            <p><i>Allergener: Gluten, laktose</i></p>
+          </div>
+          <h4>200 kr</h4>
+        </div>
+        <div class="menuItem">
+          <div>
+            <h3>Bratwurst med fries</h3>
+            <p>Tysk bratwurst med pommes frites</p>
+            <p><i>Allergener: Gluten</i></p>
+          </div>
+          <h4>190 kr</h4>
+        </div>
+      </div>
+      <div id="dinnerMenu" class="menuOverview">
+        <h2>Middagsmeny</h2>
+        <div class="menuItem">
+          <div>
+            <h3>Pølsegrateng</h3>
+            <p>Klassisk pølsegrateng med pasta</p>
+            <p><i>Allergener: Gluten</i></p>
+          </div>
+          <h4>280 kr</h4>
+        </div>
+        <div class="menuItem">
+          <div>
+            <h3>Chorizo</h3>
+            <p>Spansk pølse med surkål</p>
+            <p><i>Allergener: Gluten, nøtter</i></p>
+          </div>
+          <h4>260 kr</h4>
+        </div>
+        <div class="menuItem">
+          <div>
+            <h3>Pølsetallerken</h3>
+            <p>Winerpølser i potetmos med remulade og sopp</p>
+            <p><i>Allergener: Gluten</i></p>
+          </div>
+          <h4>220 kr</h4>
+        </div>
+      </div>
+      <div id="snacksMenu" class="menuOverview">
+        <h2>Snacksmeny</h2>
+        <div class="menuItem">
+          <div>
+            <h3>Snackspølse med potet</h3>
+            <p>Lokal småpølse med potetsalat</p>
+            <p><i>Allergener: Gluten, laktose</i></p>
+          </div>
+          <h4>120 kr</h4>
+        </div>
+        <div class="menuItem">
+          <div>
+            <h3>Pølse i brød/lompe</h3>
+            <p>Du kan velge mellom brød eller lompe</p>
+            <p><i>Allergener: Gluten</i></p>
+          </div>
+          <h4>50 kr</h4>
+        </div>
+        <div class="menuItem">
+          <div>
+            <h3>Pommes frites</h3>
+            <p>Strimlede poteter som er frityrstekt</p>
+            <p><i>Allergener: Gluten</i></p>
+          </div>
+          <h4>40 kr</h4>
+        </div>
+      </div>
+      <div id="drinkMenu" class="menuOverview">
+        <h2>Drikke</h2>
+        <div class="menuItem">
+          <div>
+            <h3>Mineralvann 0,5</h3>
+            <p><i>Cola, Fanta, Sprite</i></p>
+          </div>
+          <h4>70 kr</h4>
+        </div>
+        <div class="menuItem">
+          <div>
+            <h3>Kaffe</h3>
+            <p>Espresso, Frappuccino, Iskaffe</p>
+            <p><i>Allergener: Laktose, hvete, bygg</i></p>
+          </div>
+          <h4>50 kr</h4>
+        </div>
+        <div class="menuItem">
+          <div>
+            <h3>Øl 0,5</h3>
+            <p><i>Allergener: Bygg</i></p>
+          </div>
+          <h4>100 kr</h4>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="contactInfo">
+        <h3>Kontakt Oss</h3>
+        <address>
+          <p>
+            <a href="https://goo.gl/maps/eX2SqfYQHjjiLABJA" target="_blank">Stranden 5</a><br />0250 Oslo
+          </p>
+        </address>
+        <br />
+        <p>Daglig Leder: <i>Per Berg</i></p>
+        <p>Epost: <a href="mailto:kontakt@peber.no"><i>kontakt@peber.no</i></a></p>
+        <p>Mobil: <a href="tel:+4741232146"><i>+47 412 321 46</i></a></p>
+      </div>
+      <div class="openingHours">
+        <h3>Pølseri Åpningstider</h3>
+        <div>
+          <p>Mandag - Fredag</p>
+          <p><time>09:00</time>-<time>20:00</time></p>
         </div>
         <div>
-          <h3>Sosiale Medier</h3>
-          <div class="socialLinks">
-            <!-- Disse logoene er hentet fra fontawesome.com, se import-link i head -->
-            <a href="https://facebook.com/" target="_blank" id="facebook"><i class="fa-brands fa-square-facebook">
-                <p class="hide-text">Link til vår facebook side</p>
-              </i></a>
-            <a href="https://instagram.com/" target="_blank" id="instagram"><i class="fa-brands fa-instagram">
-                <p class="hide-text">Link til vår instagram profil</p>
-              </i></a>
-            <a href="https://linkedin.com/" target="_blank" id="linkedin"><i class="fa-brands fa-linkedin">
-                <p class="hide-text">Link til vår linkedin profil</p>
-              </i></a>
-          </div>
+          <p>Lørdag - Søndag</p>
+          <p><time>10:00</time>-<time>18:00</time></p>
         </div>
-      </footer>
-    </div>
-  </body>
+      </div>
+      <div class="footerNav">
+        <h3>Navigasjon</h3>
+        <nav>
+          <a href="../index.html">Hjem</a>
+          <a href="../Pages/booking.html">Booking</a>
+          <a href="../Pages/polseri.html">Pølseri</a>
+          <a href="../Pages/Accessibility.html">Brukertilpasning</a>
+          <a href="../Pages/Topical.html">Aktuelt</a>
+        </nav>
+      </div>
+      <div>
+        <h3>Sosiale Medier</h3>
+        <div class="socialLinks">
+          <!-- Disse logoene er hentet fra fontawesome.com, se import-link i head -->
+          <a href="https://facebook.com/" target="_blank" id="facebook"><i class="fa-brands fa-square-facebook">
+              <span class="hide-text">Link til vår facebook side</span>
+            </i></a>
+          <a href="https://instagram.com/" target="_blank" id="instagram"><i class="fa-brands fa-instagram">
+              <span class="hide-text">Link til vår instagram profil</span>
+            </i></a>
+          <a href="https://linkedin.com/" target="_blank" id="linkedin"><i class="fa-brands fa-linkedin">
+              <span class="hide-text">Link til vår linkedin profil</span>
+            </i></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
 </html>
