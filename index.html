@@ -7,10 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Peber - Lokaler til alle slags arrangementer</title>
   <link rel="icon" href="./Assets/Images/Favicon/favicon2.ico" />
+
+  <!-- Vårt eget stylesheet -->
   <link rel="stylesheet" href="./CSS/styles.css" />
+
+  <!-- Import av fontawesom ikonene vi bruker (https://fontawesome.com/) -->
   <link rel="stylesheet" href="./Assets/Icons/fontawesome-free-6.2.0-web/css/fontawesome.css" />
   <link rel="stylesheet" href="./Assets/Icons/fontawesome-free-6.2.0-web/css/brands.css" />
   <link rel="stylesheet" href="./Assets/Icons/fontawesome-free-6.2.0-web/css/solid.css" />
+
+  <!-- Link til våre javascript funksjoner -->
   <script src="./JavaScripts/mobileHeaderButton.js"></script>
 </head>
 
@@ -20,9 +26,11 @@
       <div class="desktopHeader">
         <h1><a href="./index.html">Peber</a></h1>
         <nav class="topNav">
+          <!-- Denne første linken er bare vist på mobil -->
           <a href="javascript:void(0);" class="icon" onclick="mobileMenuButton()"><i class="fa-solid fa-bars">
               <span class="hide-text">Knapp som åpner navigasjonsmenyen</span>
             </i></a>
+          <!-- Disse linkene er gjemt på mobil, men vist på stor-skjerm -->
           <a href="./index.html" class="activePage">Hjem</a>
           <a href="./Pages/booking.html">Booking</a>
           <a href="./Pages/polseri.html">Pølseri</a>
@@ -30,6 +38,7 @@
           <a href="./Pages/Topical.html">Aktuelt</a>
         </nav>
       </div>
+      <!-- Disse knappene er gjemt på stor-skjerm, men vist på mobil -->
       <nav class="mobileNav" id="theMobileNav">
         <a href="./index.html" class="activePage">Hjem</a>
         <a href="./Pages/booking.html">Booking</a>
@@ -38,6 +47,8 @@
         <a href="./Pages/Topical.html">Aktuelt</a>
       </nav>
     </header>
+
+    <!-- Hovedbildet for siden, med tittel og sideinformasjon -->
     <div class="mainImg homepageImg">
       <div class="pageInformation">
         <h1>Peber</h1>
@@ -55,6 +66,8 @@
         <a href="https://www.pexels.com/photo/people-in-a-restaurant-beside-body-of-water-1346132/" target="_blank">Pexels.com</a>
       </p>
     </div>
+
+    <!-- Store navigasjon-knapper -->
     <div class="homepageButtonContainer">
       <div class="homepageButton homepageButton1" id="main">
         <div>
@@ -113,6 +126,8 @@
         <h2><a href="./Pages/Topical.html">Aktuelt</a></h2>
       </div>
     </div>
+
+    <!-- Starten på footeren -->
     <footer>
       <div class="contactInfo">
         <h3>Kontakt Oss</h3>

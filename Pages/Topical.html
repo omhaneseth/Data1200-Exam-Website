@@ -7,10 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Peber - Lokaler til alle slags arrangementer</title>
   <link rel="icon" href="../Assets/Images/Favicon/favicon2.ico" />
+
+  <!-- Vårt eget stylesheet -->
   <link rel="stylesheet" href="../CSS/styles.css" />
+
+  <!-- Import av fontawesom ikonene vi bruker (https://fontawesome.com/) -->
   <link rel="stylesheet" href="../Assets/Icons/fontawesome-free-6.2.0-web/css/fontawesome.css" />
   <link rel="stylesheet" href="../Assets/Icons/fontawesome-free-6.2.0-web/css/brands.css" />
   <link rel="stylesheet" href="../Assets/Icons/fontawesome-free-6.2.0-web/css/solid.css" />
+
+  <!-- Link til våre javascript funksjoner -->
   <script src="../JavaScripts/mobileHeaderButton.js"></script>
 </head>
 
@@ -20,9 +26,11 @@
       <div class="desktopHeader">
         <h1><a href="../index.html">Peber</a></h1>
         <nav class="topNav">
+          <!-- Denne første linken er bare vist på mobil -->
           <a href="javascript:void(0);" class="icon" onclick="mobileMenuButton()"><i class="fa-solid fa-bars">
               <span class="hide-text">Knapp som åpner navigasjonsmenyen</span>
             </i></a>
+          <!-- Disse linkene er gjemt på mobil, men vist på stor-skjerm -->
           <a href="../index.html">Hjem</a>
           <a href="../Pages/booking.html">Booking</a>
           <a href="../Pages/polseri.html">Pølseri</a>
@@ -30,6 +38,7 @@
           <a href="../Pages/Topical.html" class="activePage">Aktuelt</a>
         </nav>
       </div>
+      <!-- Disse knappene er gjemt på stor-skjerm, men vist på mobil -->
       <nav class="mobileNav" id="theMobileNav">
         <a href="../index.html">Hjem</a>
         <a href="../Pages/booking.html">Booking</a>
@@ -38,12 +47,16 @@
         <a href="../Pages/Topical.html" class="activePage">Aktuelt</a>
       </nav>
     </header>
+
+    <!-- Hovedinnholdet for siden -->
     <main class="topicalPage">
       <h1>Aktuelt</h1>
       <p class="data1100Credits">All tekst på denne siden er hentet fra en Data1100 Oblig (<a href="#DATA1100">s375159,
           2022</a>)</p>
       <hr>
       <br>
+
+      <!-- Del 1 -->
       <article class="topicContainer">
         <div class="topicTitle">
           <h2 class="topicSticky">Modul 1.3</h2>
@@ -92,6 +105,8 @@
             </p>
           </section>
         </div>
+
+        <!-- Sticky bilde til del 1 -->
         <div class="topicImage">
           <figure class="topicSticky">
             <img src="../Assets/Images/Topical/CompressedTopicalImage1.jpg" alt="Dame sitter lent over bordet og ser på mobilen">
@@ -102,6 +117,8 @@
           </figure>
         </div>
       </article>
+
+      <!-- Del 2 -->
       <article class="topicContainer">
         <div class="topicTitle">
           <h2 class="topicSticky">Modul 1.4</h2>
@@ -150,6 +167,8 @@
             </p>
           </section>
         </div>
+
+        <!-- Sticky bilde til del 2 -->
         <div class="topicImage">
           <figure class="topicSticky">
             <img src="../Assets/Images/Topical/Compressed_TopicalImage2.jpg" alt="Mobil som ligger flatt på et trebord. Mobilskjermen er hvit med teksten: Hello">
@@ -160,6 +179,8 @@
           </figure>
         </div>
       </article>
+
+      <!-- Definisjonsliste -->
       <div class="definitions">
         <div>
           <h2>Begrepsliste</h2>
@@ -178,6 +199,8 @@
           </dl>
         </div>
       </div>
+
+      <!-- Kildeliste -->
       <div class="references">
         <h2>Referanser</h2>
         <p>
@@ -232,6 +255,8 @@
         </p>
       </div>
     </main>
+
+    <!-- Starten på footeren -->
     <footer id="topicalFooter">
       <div class="contactInfo">
         <h3>Kontakt Oss</h3>
