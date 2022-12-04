@@ -20,7 +20,9 @@
       <div class="desktopHeader">
         <h1><a href="../index.html">Peber</a></h1>
         <nav class="topNav">
-          <a href="javascript:void(0);" class="icon" onclick="mobileMenuButton()"><i class="fa-solid fa-bars"></i></a>
+          <a href="javascript:void(0);" class="icon" onclick="mobileMenuButton()"><i class="fa-solid fa-bars">
+              <p class="hide-text">Knapp som åpner navigasjonsmenyen</p>
+            </i></a>
           <a href="../index.html">Hjem</a>
           <a href="../Pages/booking.html" class="activePage">Booking</a>
           <a href="../Pages/polseri.html">Pølseri</a>
@@ -46,12 +48,12 @@
         <p>Vi har utsikt rett ut mot den vakre <i>oslo-fjorden</i>, hvor man kan få kjempefine solnedganger på kveldene. <i>Perfekt</i> for arrangementet <b>ditt!</b></p>
       </div>
       <div class="arrowDown">
-        <a href="#main"><i class="fa-solid fa-angles-down"></i></a>
+        <a href="#main"><i class="fa-solid fa-angles-down"><p class="hide-text">Pil-knapp for å scrolle ned til hovedinnholdet</p></i></a>
       </div>
-      <p class="imageCredits">
+      <figcaption class="imageCredits">
         Bilde av Ole Bole, hentet fra
         <a href="https://pexels.com" target="_blank">Pexels.com</a>
-      </p>
+      </figcaption>
     </div>
     <main id="main">
       <div class="bookingContainer locationInfo">
@@ -75,14 +77,14 @@
             </ul>
           </div>
         </div>
-        <div>
+        <figure>
           <img src="../Assets/Images/Placeholders/BookingPlaceholder/pexels-quark-studio-3201922.jpg"
             alt="Bilde av hvordan våre lokaler ser ut. Lyse områder med mye grønne planter. Store vinduer med utsikt ut mot fjorden.">
-          <p class="imageCredits">
+          <figcaption class="imageCredits">
             Bilde av Ole Bole, hentet fra
             <a href="https://pexels.com" target="_blank">Pexels.com</a>
-          </p>
-        </div>
+          </figcaption>
+        </figure>
       </div>
       <div class="bookingContainer">
         <div>
@@ -131,14 +133,14 @@
       </div>
       <div class="openingHours">
         <h3>Pølseri Åpningstider</h3>
-          <div>
-            <p>Mandag - Fredag</p>
-            <p>09:00-20:00</p>
-          </div>
-          <div>
-            <p>Lørdag - Søndag</p>
-            <p>10:00-18:00</p>
-          </div>
+        <div>
+          <p>Mandag - Fredag</p>
+          <p><time>09:00</time>-<time>20:00</time></p>
+        </div>
+        <div>
+          <p>Lørdag - Søndag</p>
+          <p><time>10:00</time>-<time>18:00</time></p>
+        </div>
       </div>
       <div class="footerNav">
         <h3>Navigasjon</h3>
@@ -153,9 +155,16 @@
       <div>
         <h3>Sosiale Medier</h3>
         <div class="socialLinks">
-          <a href="https://facebook.com/" target="_blank" id="facebook"><i class="fa-brands fa-square-facebook"></i></a>
-          <a href="https://instagram.com/" target="_blank" id="instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://linkedin.com/" target="_blank" id="linkedin"><i class="fa-brands fa-linkedin"></i></a>
+          <!-- Disse logoene er hentet fra fontawesome.com, se import-link i head -->
+          <a href="https://facebook.com/" target="_blank" id="facebook"><i class="fa-brands fa-square-facebook">
+              <p class="hide-text">Link til vår facebook side</p>
+            </i></a>
+          <a href="https://instagram.com/" target="_blank" id="instagram"><i class="fa-brands fa-instagram">
+              <p class="hide-text">Link til vår instagram profil</p>
+            </i></a>
+          <a href="https://linkedin.com/" target="_blank" id="linkedin"><i class="fa-brands fa-linkedin">
+              <p class="hide-text">Link til vår linkedin profil</p>
+            </i></a>
         </div>
       </div>
     </footer>

@@ -19,7 +19,7 @@
   );
 
   /* Høyde på headeren (For at ting ikke skal bli gjemnt bak)*/
-  --headerHight: 100px;
+  --headerHight: 6rem;
 }
 
 /* Generelt sideoppsett */
@@ -45,6 +45,10 @@ body {
   color: var(--generalTextColor);
 }
 
+/* Fjerner teksten som er lagt til for screen readere */
+.hide-text {
+  text-indent: -9999px;
+}
 /* #endregion Master Styles */
 
 /* #region HEADER */
@@ -367,7 +371,8 @@ footer h3 {
 }
 
 /* Oppsett av flex-objektene */
-.bookingContainer > div {
+.bookingContainer > div, 
+.bookingContainer > figure {
   width: 30em;
   margin: 1em 2em;
 }
@@ -377,7 +382,7 @@ footer h3 {
   align-self: flex-start;
 }
 
-/* Lager mellomrom mellom tekstdelene i flexs-objektene */
+/* Lager mellomrom mellom tekstdelene i flex-objektene */
 .bookingContainer > div > div {
   margin-bottom: 2em;
 }
@@ -412,7 +417,7 @@ footer h3 {
   padding: 0.3em 0.8em;
 }
 
-/* Oppsett av forklarings-tekstboksen */
+/* Oppsett av forklarings-tekstboksen i skjemaet */
 #bookingDescription {
   grid-column-start: 1;
   grid-column-end: 3;
@@ -432,7 +437,8 @@ footer h3 {
     flex-direction: column;
   }
 
-  .bookingContainer > div {
+  .bookingContainer > div, 
+  .bookingContainer > figure {
     width: auto !important;
   }
 }
@@ -542,8 +548,8 @@ footer h3 {
 /* #region TOPICAL */
 .topicalPage {
   /* Setter egne farger for denne siden */
-  background: white;
-  color: black;
+  background: #fffef3;
+  color: #222;
 }
 
 /* Styling av hovedtittlen for siden */
@@ -551,6 +557,10 @@ footer h3 {
   text-align: center;
   padding: 1em;
   font-size: 4em;
+}
+
+.data1100Credits {
+  padding: 0 2em;
 }
 
 /* Oppsett for alle modulene */
@@ -615,7 +625,7 @@ footer h3 {
 }
 
 /* Tilpasser layouten til mellomstore skjermer, dvs. ipad og lignende */
-@media screen and (max-width: 900px) and (min-width: 620px) {
+@media screen and (max-width: 1000px) and (min-width: 701px) {
   .topicContainer {
     grid-template-columns: auto auto;
     padding: 0 1em;
@@ -641,7 +651,7 @@ footer h3 {
 }
 
 /* Tilpasser layouten til små skjermer, mobiler */
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 700px) {
   .topicContainer {
     grid-template-columns: auto;
     padding: 0 1em;
