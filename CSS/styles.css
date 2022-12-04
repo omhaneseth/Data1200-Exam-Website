@@ -580,6 +580,7 @@ footer h3 {
   /* Legger til hovedbildet for denne siden */
   background-image: var(--mainImgGradiant),
     url(../Assets/Images/Accessibility/MainImage/Compressed_AccessibilityMainImage.jpg);
+    background-position: bottom;
 }
 
 /* Setter størrelse og sentrerer tekstboksen */
