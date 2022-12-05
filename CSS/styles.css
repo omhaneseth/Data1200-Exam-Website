@@ -169,9 +169,7 @@ header {
 
 /* Styling av hovedtittelen for siden */
 .pageInformation h1 {
-  -webkit-hyphens: auto;
   hyphens: auto;
-
   text-transform: uppercase;
   letter-spacing: 0.2em;
   margin: 1em 0;
